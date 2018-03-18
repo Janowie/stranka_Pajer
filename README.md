@@ -1,0 +1,2 @@
+# stranka_Pajer
+praca
