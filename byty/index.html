@@ -1,0 +1,617 @@
+<!-- CONTACTS -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> RJD </title>
+	<link rel="icon" type="image/png" sizes="16x16" href="../images/logo_icon.png">
+    
+	<!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- own -->
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	
+	<!--  Fonts  -->
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+	
+	
+  </head>
+  <body>
+   
+    <nav>
+		<div class="container">
+			
+			<ul>
+				<li><a class="navBrand" href="../index.html"> Byty Jurajov dvor </a></li>
+				<li><img class="navLogo" src="../images/logo.png" alt="logo" /></li>
+				<li style="float: right;" class="navButton">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navCollapse" aria-expanded="false">
+						<div class="menuToggler"></div>
+						<div class="menuToggler"></div>
+					</button>
+				</li>
+				<div class="collapse navbar-collapse" id="navCollapse">
+					<li><a href="#"> O projekte </a></li>
+					<li><a href="index.html"> Byty a parkovanie </a></li>
+					<li><a href="../financovanie/index.html"> Financovanie </a></li>
+					<li><a href="../kontakty/index.html"> Kontakty </a></li>
+				</div>
+				
+			</ul>
+
+        </div>
+	</nav>
+
+	<div class="container smallNav" style="text-align:center;">
+		<div class="col-lg-2"></div>
+		<div class="col-lg-4">
+			<img src="../images/logoByty1.jpg" alt="logoByty1" style="width: 70px; padding-right: 10px;"/>
+			<a href="jednoizbovy/index.html"> Jednoizbový byt </a>
+		</div>
+		<div class="col-lg-4">
+			<img src="../images/logoByty2.jpg" alt="logoByty2" style="width: 70px; padding-right: 10px;"/>
+			<a href="dvojizbovy/index.html"> Dvojizbový byt </a>
+		</div>
+		<div class="col-lg-2"></div>
+	</div>
+
+	<hr style="border-top: 1px dotted #2c3e50;">
+	
+	<p class="space"> Byty a parkovanie </p>
+
+	<img src="../images/bytyTop.png" alt="vizualizaciaByt" style="width:100%;"/>
+	
+	<h2 class="text-center" style="margin: 50px 0px 30px 0px;"> Nájdite si Váš nový domov </h2>
+
+	<div class="container bytyPoschodia" style="margin-top: 15px;">
+			
+			<div class="area1" id="mapByty"></div>
+			<div class="area2" id="mapByty"></div>
+			<div class="area3" id="mapByty"></div>
+			<div class="area4" id="mapByty"></div>
+
+			<div class="area1Tag" id="Tag"><p><br><b> 6 </b></p></div>
+			<div class="area2Tag" id="Tag"><p><br><b> 4 </b></p></div>
+			<div class="area3Tag" id="Tag"><p><br><b> 8 </b></p></div>
+			<div class="area4Tag" id="Tag"><p><br><b> 2 </b></p></div>
+		
+		<img src="../images/bytyFront.jpg" alt="vizualizacia" style="width: 100%;"/>
+		
+	</div>
+	
+
+	<div style="height:50px;"></div>
+	
+	<div class="container">
+		
+		<h2 class="text-center"> Cenník </h2>
+		
+		<div class="container filter">
+		
+			<!-- SWITCH -->
+			<ul class="">
+				<li>
+					<p> 1 izba </p>
+				</li>
+				<li>
+					<label class="switch">
+					<input type="checkbox" id="switchOne" checked>
+					<span class="sliderSwitch round"></span>
+					</label>
+				</li>	
+				<li>	
+					<p> 2 izby </p>
+				</li>	
+				<li>
+					<label class="switch">
+					<input type="checkbox" id="switchTwo" checked>
+					<span class="sliderSwitch round"></span>
+					</label>
+				</li>
+				<li>	
+					<p> voľný </p>
+				</li>	
+				<li>
+					<label class="switch">
+					<input type="checkbox" id="switchThree">
+					<span class="sliderSwitch round"></span>
+					</label>
+				</li>
+			</ul>
+			<!-- /SWITCH -->	
+			
+		</div>
+
+	
+		<div class="">
+			<table class="table table-striped">
+				<tr class="tableHead">
+					<td>
+						Podlažie
+					</td>
+					<td>
+						Kód bytu
+					</td>
+					<td>
+						Počet izieb
+					</td>
+					<td>
+						Plocha bytu
+					</td>
+					<td>
+						Loggia
+					</td>
+					<td>
+						Celk. plocha
+					</td>
+					<td>
+						Cena s DPH
+					</td>
+					<td>
+						Stav
+					</td>
+				</tr>
+				
+				<tr class="oneRoom taken" id="">
+					<td>
+						<p>1.</p>
+					</td>
+					<td>
+						<p>#1Z1</p>
+					</td>
+					<td>
+						<p>1</p>
+					</td>
+					<td>
+						<p>60 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>10 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>70 m<sup>2</sup></p>
+					</td>
+					<td class="price">
+						<p>140 000€</p>
+					</td>
+					<td>
+						<p>Predané</p>
+					</td>
+				</tr>
+
+				<tr class="oneRoom taken" id="">
+					<td>
+						<p>1.</p>
+					</td>
+					<td>
+						<p>#1Z1</p>
+					</td>
+					<td>
+						<p>1</p>
+					</td>
+					<td>
+						<p>60 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>10 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>70 m<sup>2</sup></p>
+					</td>
+					<td class="price">
+						<p>140 000€</p>
+					</td>
+					<td>
+						<p>Predané</p>
+					</td>
+				</tr>
+
+				<tr class="oneRoom taken" id="">
+					<td>
+						<p>1.</p>
+					</td>
+					<td>
+						<p>#1Z1</p>
+					</td>
+					<td>
+						<p>1</p>
+					</td>
+					<td>
+						<p>60 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>10 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>70 m<sup>2</sup></p>
+					</td>
+					<td class="price">
+						<p>140 000€</p>
+					</td>
+					<td>
+						<p>Predané</p>
+					</td>
+				</tr>
+
+				<tr class="oneRoom taken" id="">
+					<td>
+						<p>1.</p>
+					</td>
+					<td>
+						<p>#1Z1</p>
+					</td>
+					<td>
+						<p>1</p>
+					</td>
+					<td>
+						<p>60 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>10 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>70 m<sup>2</sup></p>
+					</td>
+					<td class="price">
+						<p>140 000€</p>
+					</td>
+					<td>
+						<p>Predané</p>
+					</td>
+				</tr>
+
+				<tr class="twoRoom">
+					<td>
+						<p>1.</p>
+					</td>
+					<td>
+						<p>#2S1</p>
+					</td>
+					<td>
+						<p>2</p>
+					</td>
+					<td>
+						<p>60 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>10 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>70 m<sup>2</sup></p>
+					</td>
+					<td class="price">
+						<p>140 000€</p>
+					</td>
+					<td>
+						<p>Voľné</p>
+					</td>
+				</tr>
+
+				<tr class="twoRoom">
+					<td>
+						<p>1.</p>
+					</td>
+					<td>
+						<p>#2S1</p>
+					</td>
+					<td>
+						<p>2</p>
+					</td>
+					<td>
+						<p>60 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>10 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>70 m<sup>2</sup></p>
+					</td>
+					<td class="price">
+						<p>140 000€</p>
+					</td>
+					<td>
+						<p>Voľné</p>
+					</td>
+				</tr>
+
+				<tr class="twoRoom">
+					<td>
+						<p>1.</p>
+					</td>
+					<td>
+						<p>#2S1</p>
+					</td>
+					<td>
+						<p>2</p>
+					</td>
+					<td>
+						<p>60 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>10 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>70 m<sup>2</sup></p>
+					</td>
+					<td class="price">
+						<p>140 000€</p>
+					</td>
+					<td>
+						<p>Voľné</p>
+					</td>
+				</tr>
+
+				<tr class="twoRoom">
+					<td>
+						<p>1.</p>
+					</td>
+					<td>
+						<p>#2S1</p>
+					</td>
+					<td>
+						<p>2</p>
+					</td>
+					<td>
+						<p>60 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>10 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>70 m<sup>2</sup></p>
+					</td>
+					<td class="price">
+						<p>140 000€</p>
+					</td>
+					<td>
+						<p>Voľné</p>
+					</td>
+				</tr>
+
+				<tr class="oneRoom">
+					<td>
+						<p>2.</p>
+					</td>
+					<td>
+						<p>#1Z1</p>
+					</td>
+					<td>
+						<p>1</p>
+					</td>
+					<td>
+						<p>60 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>10 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>70 m<sup>2</sup></p>
+					</td>
+					<td class="price">
+						<p>140 000€</p>
+					</td>
+					<td>
+						<p>Voľné</p>
+					</td>
+				</tr>
+
+				<tr class="oneRoom">
+					<td>
+						<p>2.</p>
+					</td>
+					<td>
+						<p>#1Z1</p>
+					</td>
+					<td>
+						<p>1</p>
+					</td>
+					<td>
+						<p>60 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>10 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>70 m<sup>2</sup></p>
+					</td>
+					<td class="price">
+						<p>140 000€</p>
+					</td>
+					<td>
+						<p>Voľné</p>
+					</td>
+				</tr>
+
+				<tr class="oneRoom">
+					<td>
+						<p>2.</p>
+					</td>
+					<td>
+						<p>#1Z1</p>
+					</td>
+					<td>
+						<p>1</p>
+					</td>
+					<td>
+						<p>60 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>10 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>70 m<sup>2</sup></p>
+					</td>
+					<td class="price">
+						<p>140 000€</p>
+					</td>
+					<td>
+						<p>Voľné</p>
+					</td>
+				</tr>
+
+				<tr class="oneRoom">
+					<td>
+						<p>2.</p>
+					</td>
+					<td>
+						<p>#1Z1</p>
+					</td>
+					<td>
+						<p>1</p>
+					</td>
+					<td>
+						<p>60 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>10 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>70 m<sup>2</sup></p>
+					</td>
+					<td class="price">
+						<p>140 000€</p>
+					</td>
+					<td>
+						<p>Voľné</p>
+					</td>
+				</tr>
+
+				<tr class="twoRoom">
+					<td>
+						<p>2.</p>
+					</td>
+					<td>
+						<p>#2S1</p>
+					</td>
+					<td>
+						<p>2</p>
+					</td>
+					<td>
+						<p>60 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>10 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>70 m<sup>2</sup></p>
+					</td>
+					<td class="price">
+						<p>140 000€</p>
+					</td>
+					<td>
+						<p>Voľné</p>
+					</td>
+				</tr>
+
+				<tr class="twoRoom">
+					<td>
+						<p>2.</p>
+					</td>
+					<td>
+						<p>#2S1</p>
+					</td>
+					<td>
+						<p>2</p>
+					</td>
+					<td>
+						<p>60 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>10 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>70 m<sup>2</sup></p>
+					</td>
+					<td class="price">
+						<p>140 000€</p>
+					</td>
+					<td>
+						<p>Voľné</p>
+					</td>
+				</tr>
+
+				<tr class="twoRoom">
+					<td>
+						<p>2.</p>
+					</td>
+					<td>
+						<p>#2S1</p>
+					</td>
+					<td>
+						<p>2</p>
+					</td>
+					<td>
+						<p>60 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>10 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>70 m<sup>2</sup></p>
+					</td>
+					<td class="price">
+						<p>140 000€</p>
+					</td>
+					<td>
+						<p>Voľné</p>
+					</td>
+				</tr>
+
+				<tr class="twoRoom">
+					<td>
+						<p>2.</p>
+					</td>
+					<td>
+						<p>#2S1</p>
+					</td>
+					<td>
+						<p>2</p>
+					</td>
+					<td>
+						<p>60 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>10 m<sup>2</sup></p>
+					</td>
+					<td>
+						<p>70 m<sup>2</sup></p>
+					</td>
+					<td class="price">
+						<p>140 000€</p>
+					</td>
+					<td>
+						<p>Voľné</p>
+					</td>
+				</tr>
+
+
+				
+
+			</table>
+		</div>
+	
+	</div>
+	
+	
+	<div style="height: 100px;">
+		</div>
+	
+	<footer>
+	
+	</footer>
+	
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../script.js"></script>
+  </body>
+</html>

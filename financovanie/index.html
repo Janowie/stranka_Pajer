@@ -1,0 +1,198 @@
+<!-- CONTACTS -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> RJD </title>
+	<link rel="icon" type="image/png" sizes="16x16" href="../images/logo_icon.png">
+    
+	<!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- own -->
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	
+	<!--  Fonts  -->
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+	
+
+  </head>
+  <body>
+   
+    <nav>
+		<div class="container">
+			
+			
+			<ul>
+				<li><a class="navBrand" href="../index.html"> Byty Jurajov dvor </a></li>
+				<li><img class="navLogo" src="../images/logo.png" alt="logo" /></li>
+				<li style="float: right;" class="navButton">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navCollapse" aria-expanded="false">
+						<div class="menuToggler"></div>
+						<div class="menuToggler"></div>
+					</button>
+				</li>
+				<div class="collapse navbar-collapse" id="navCollapse">
+					<li><a href="#"> O projekte </a></li>
+					<li><a href="../byty/index.html"> Byty a parkovanie </a></li>
+					<li><a href="index.html"> Financovanie </a></li>
+					<li><a href="../kontakty/index.html"> Kontakty </a></li>
+				</div>
+				
+			</ul>
+        </div>
+    </nav>
+	
+	<p class="space"> Fincancovanie</p>
+	
+	
+	<div class="container-fluid finance">
+	
+		<h3> Postup pri kúpe bytu </h3>
+	<div class="center" style="max-width: 1250px;">
+		<div class="row">
+			
+			<div class="col-lg-2 financeCol center">
+				<img src="../images/podpis.png" alt="logo_pen" />
+				<p class="text-center">
+					Podpísanie zmluvy o uzavretí budúcej zmluvy o prevode
+					vlastníctva bytu
+				</p>
+			</div>
+			<div class="col-lg-2 financeCol center">
+				<img src="../images/percenta20.png" alt="logo_percent" />
+				<p class="text-center">
+					Uhradíte 1. splátku kúpnej ceny bytu vo výške 20% do 20
+					dní od podpisu
+				</p>
+			</div>
+			<div class="col-lg-2 financeCol center">
+				<img src="../images/percenta80.png" alt="logo_percent" />
+				<p class="text-center">
+					Prevedenie zvyšných 80% z kúpnej ceny po nadobudnutí 
+					právoplatnosti kolaudačného rozhodnutia
+				</p>
+			</div>
+			<div class="col-lg-2 financeCol center">
+				<img src="../images/podpis.png" alt="logo_pen" />
+				<p class="text-center">
+					Podpísanie zmluvy o prevode vlastníctva bytu
+				</p>
+			</div>
+			<div class="col-lg-2 financeCol center">
+				<img src="../images/klucc.png" alt="logo_key" />
+				<p class="text-center">
+					A byt snov je Váš!
+				</p>
+			</div>
+		
+		</div>
+	</div>
+	</div>
+	
+	<div style="height: 30px;"></div>
+	
+	<h3> Výpočet mesačnej splátky </h3>
+	<div class="container-fluid">
+	
+		<div class="center" style="width: 50%; margin-top: 20px;">
+			<p> Výška hypotéky: <span id="demoA"></span> € </p>
+			<input type="range" value="0" min="0" max="300000"  step="5000" class="slider" id="myRangeA">
+		</div>
+		<div class="center" style="width: 50%; margin-top: 20px;">
+			<p> Úroková sadzba: <span id="demoB"></span> % </p>
+			<input type="range" min="0" max="50" value="0" class="slider" id="myRangeB">
+		</div>
+		<div class="center" style="width: 50%; margin-top: 20px;">
+			<p> Doba splácania: <span id="demoC"></span> r </p>
+			<input type="range" min="0" max="50" value="0" class="slider" id="myRangeC">
+		</div>
+		<div class="center" style="width: 120px; margin-top: 30px;">
+		
+		<div style="height: 20px;"></div>
+		
+		<button class="btn"> Vypočítaj </button>
+	
+		</div>
+	
+	<script>
+	var sliderA = document.getElementById("myRangeA");
+	var outputA = document.getElementById("demoA");
+	
+	var sliderB = document.getElementById("myRangeB");
+	var outputB = document.getElementById("demoB");
+	
+	var sliderC = document.getElementById("myRangeC");
+	var outputC = document.getElementById("demoC");
+	
+	
+	outputA.innerHTML = sliderA.value;
+	outputB.innerHTML = sliderB.value;
+	outputC.innerHTML = sliderC.value;
+
+	sliderA.oninput = function() {
+	  outputA.innerHTML = this.value;
+	}
+	sliderB.oninput = function() {
+	  outputB.innerHTML = this.value / 10;
+	}
+	sliderC.oninput = function() {
+	  outputC.innerHTML = this.value;
+	}
+	
+	// 1 + úrok 
+	
+	
+	</script>
+	
+	<div style="height: 30px;"></div>
+	
+	<hr>
+	<div style="height: 1px;"></div>
+	<h3> Poradenstvo </h3>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<p> <br><br>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+				Ut congue suscipit rutrum. Vivamus laoreet tempor ante vitae
+				pharetra. Phasellus a volutpat est. Nunc varius ex id eros 
+				rutrum hendrerit. Quisque a mi sagittis, pharetra mi id, 
+				finibus tortor. Proin rutrum egestas mollis. Sed feugiat 
+				diam nec erat egestas, sit amet maximus magna consectetur. 
+				Sed pellentesque, nibh eu luctus rutrum, nisi ex tempus nunc, 
+				rhoncus aliquam mauris tortor non augue. Duis at ipsum 
+				sed elit tempor laoreet. Quisque ac porttitor felis, 
+				in eleifend justo. Vestibulum tortor purus, porta eu 
+				tincidunt eget, rutrum id massa.
+				</p>
+			</div>
+			<div class="col-lg-4" style="background-color: black; color: white; height: 400px;">
+				<p> #Fotka </p>
+			</div>
+		</div>
+	</div>
+	</div>
+	
+	<div style="height:200px"></div>
+
+	
+	<footer>
+	
+	
+	</footer>
+	
+	
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

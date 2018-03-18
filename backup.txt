@@ -1,0 +1,85 @@
+var slideIndex1 = 1;
+		var slideIndex2 = 1;
+
+		showSlides1(slideIndex1);
+		showSlides2(slideIndex2);
+
+		function changeSlide1(n) {
+			showSlides1(slideIndex1 += n);
+		}
+
+		function changeSlide2(n) {
+			showSlides2(slideIndex2 += n);
+		}
+
+		function showSlides1(n) {
+			var i;
+			var slides = document.getElementsByClassName("slides1");
+			var buttons = document.getElementsByClassName("buttons1");
+
+			if (n > slides.length) {
+				slideIndex1 = 1;
+			}
+			if (n < slides.length) {
+				slideIndex1 = slides.length;
+			}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+				buttons[i].style.display = "none"; 
+				$(".slides1Rozmery").hide();
+			}
+			slides[slideIndex1-1].style.display = "block";
+			buttons[slideIndex1-1].style.display = "block";
+			document.getElementById("demo").innerHTML = "Som na: " + slideIndex1-1;
+		}
+
+
+		function showSlides2(n) {
+			var i;
+			var slides = document.getElementsByClassName("slides2");
+
+			if (n > slides.length) {
+				slideIndex2 = 1;
+			}
+			if (n < slides.length) {
+				slideIndex2 = slides.length;
+			}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none"; 
+			}
+			slides[slideIndex2-1].style.display = "block";
+		}
+
+
+
+		function showRozmery(n) {
+			var rozmery = document.getElementsByClassName("slides1Rozmery");
+			if (n == 1) {
+				$(rozmery[0]).toggle();
+			}
+			if (n == 2) {
+				$(rozmery[1]).toggle();
+			}
+		}
+
+
+
+
+/*	$("#scrollFromHere").scroll(function() {
+			$('html, body').animate({
+				scrollTop: $("#scrollHere").offset().top
+			}, 1000);
+		});
+		$("#scrollHere").scroll(function() {
+			$('html, body').animate({
+				scrollTop: $("#scrollFromHere").offset().top
+			}, 1000);
+		});
+	
+
+		$(document).ready(function(){
+			$("button").click(function(){
+				$(".slides1Rozmery1").toggle();
+			});
+		});
+*/

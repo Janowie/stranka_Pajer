@@ -1,0 +1,617 @@
+/* GENERAL STUFF */
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Maven Pro', sans-serif;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+h3 {
+	font-family: 'Maven Pro', sans-serif;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.btn {
+	background-color: #4CAF50;
+	height: 60px;
+	width: 120px;
+	color: white;
+}
+
+.container, .container-fluid {
+	padding: 0px;
+}
+
+
+.darkGrey {
+	background-color: #2c3e50;
+}
+
+.lightGrey {
+	background-color: #95a5a6;
+}
+
+.center {
+	margin: 0px auto 0px auto;
+}
+
+
+
+/* END OF GENERAL STUFF */
+
+/*  NAVIGATION */
+
+nav {
+	border-bottom: 8px solid #f1c40f;
+	font-family: 'Maven Pro', sans-serif;
+}
+
+nav .container {
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+nav ul {
+	list-style-type: none;
+    margin: 0% 0% 0% 10%;
+    padding: 0%;
+    overflow: hidden;
+}
+
+nav li {
+	float: left;
+}
+
+nav li a {
+	padding: 22px 16px;
+	display: block;
+    color: black;
+    text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.navLogo {
+	width: 50px;
+	margin: 20px 5px 20px 5px;
+}
+
+.navBrand {
+	font-size: 25px;
+	font-weight: bold;
+	padding-top: 26px;
+	font-family: 'Maven Pro', sans-serif;
+}
+
+#navCollapse {
+	padding: 13px 0px 0px 50%;
+}
+
+.menuToggler {
+	height: 3px;
+	width: 10px;
+	background-color: black;
+	margin-top: 2px;
+}
+
+.smallNav {
+	margin-top: 17px;
+	text-align: center;
+	font-weight: bold;
+	/*border-top: 1px solid grey;
+	border-bottom: 1px solid grey;*/
+	padding: 5px 0px 5x 0px;
+}
+
+.smallNav a {
+	color: black;	
+}
+
+.smallNav a:hover {
+	color: #f1c40f !important;
+}
+
+.current {
+	color: #f1c40f !important;
+}
+
+
+/* Smaller devices */
+@media screen and (max-width: 800px){ 
+	nav {
+		overflow: hidden;
+	}
+	
+	nav ul{
+		margin: 0px;
+	}
+
+    ul li {
+		float: none;
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	#navCollapse {
+		padding: 0%;
+	}
+	
+	.navLogo {
+		margin-top: -80px;
+		margin-left: 10px;
+	}
+	
+	.navBrand {
+		padding-top: 25px;
+		font-size: 20px;
+	}
+	
+	.navButton {
+		margin-top: -80px;
+	}
+}
+
+/* END OF NAVIGATION */
+
+/* FOOTER */
+
+footer {
+	width: 100%;
+	height: 200px;
+	padding: 0px;
+	margin: 0px;
+	background-color: #f1c40f;
+}
+
+/* END OF FOOTER */
+
+/* FRONT PAGE */
+
+.frontImg {
+	width: 100%;
+}
+
+
+.frontHeadline {
+	position: absolute;
+	top: 200px;
+	left: 4%;
+	text-align: center;
+	color: white;
+	font-size: 70px;
+	font-weight: bold;
+	font-family: 'Maven Pro', sans-serif;
+}
+
+.first, .second, .third {
+	display: none;
+}
+
+
+.highLight {
+	padding: 50px 0px 50px 0px;
+	margin-bottom: 30px;
+	background-color: #ECF0F1;
+}
+
+.highLightSmall {
+	width: 450px;
+	padding: 150px 0px 150px 0px;
+	margin-bottom: 50px;
+	text-align: center;
+	color: white;
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+.highLightSmall img {
+	width: 200px;
+}
+
+
+
+/* CONTACTS */
+
+.space {
+	margin: 30px 0px 30px 0px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 30px;
+	font-family: 'Maven Pro', sans-serif;
+}
+
+.writeUs {
+	width: auto;
+	padding: 60px;
+	margin: 0px 
+}
+
+.writeUs input {
+	height: 45px;
+}
+
+.writeUs input, .writeUs textarea {
+	max-width: 600px;
+	border-radius: 0px;
+	margin: 10px auto 0px auto;
+}
+
+.writeUs ::placeholder {
+	font-family: 'Maven Pro', sans-serif;
+}
+
+.textHighlightWhite {
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	font-family: 'Maven Pro', sans-serif;
+}
+
+.textHighlightBlack {
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+	font-family: 'Maven Pro', sans-serif;
+}
+
+.enter {
+	max-width: 600px;
+	width: 100%;
+	height: 45px;
+	margin: 0px auto 0px auto;
+	padding-top: 13px;
+	color: white;
+	background-color: #f1c40f;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 0px;
+}
+
+.contacts {
+	padding: 30px 0px 30px;
+	margin-top: 0px;
+}
+
+.contacts .col-lg-6 {
+	height: 90px;
+}
+
+.contacts img {
+	width: 100px;
+	float: left;
+	margin-right: 20px;
+	width: 90px;
+}
+
+.contacts p {
+	margin: 35px 0px 0px 20px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#map {
+	height: 500px;
+}
+
+
+
+/* FINANCIE */
+
+.finance {
+	background-color: #eee;
+}
+
+.finance .row {
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.finance img{
+	width: 100px;
+	margin-left: 60px;
+	margin-bottom: 20px;
+}
+
+.financeCol {
+	width: 250px;
+	margin-bottom: 30px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .3s;
+    transition: opacity .3s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+/*     BYTY A PARKOVANIE        */
+
+.bytyPoschodia {
+	position: relative;
+	top: 30px;
+}
+
+#mapByty {
+	position: absolute;
+	left: 15%;
+	width: 65%;
+	height: 12%;
+	cursor: pointer;
+	border-radius: 5px; 
+}
+
+#Tag {
+	position: absolute;
+	background-color: rgba(241,196,15,0.9);
+	right: 10%;
+	width: 80px;
+	height: 80px;
+	border-radius: 50px;
+}
+
+#Tag p {
+	text-align: center;
+	vertical-align: middle;
+	font-size: 20px;
+}
+
+.area1 {
+	background-color: #f1c40f;
+	top: 6%;
+	opacity: 0;
+}
+
+.area1Tag {
+	top: 8%;
+	opacity: 0;
+}
+
+.area2 {
+	background-color: #f1c40f;
+	top: 19%;
+	opacity: 0;
+}
+.area2Tag {
+	top: 21%;
+	opacity: 0;
+}
+.area3 {
+	background-color: #f1c40f;
+	top: 30.5%;
+	opacity: 0;
+}
+.area3Tag {
+	top: 32.5%;
+	opacity: 0;
+}
+.area4 {
+	background-color: #f1c40f;
+	top: 43%;
+	opacity: 0;
+}
+.area4Tag {
+	top: 45%;
+	opacity: 0;
+}
+
+/* SWITCH */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.sliderSwitch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sliderSwitch:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .sliderSwitch {
+  background-color: #f1c40f;
+}
+
+input:focus + .sliderSwitch {
+  box-shadow: 0 0 1px #f1c40f;
+}
+
+input:checked + .sliderSwitch:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.sliderSwitch.round {
+  border-radius: 34px;
+}
+
+.sliderSwitch.round:before {
+  border-radius: 50%;
+}
+
+.hideIt {
+	display: none;
+}
+
+#hideIt {
+	display: none;
+}
+
+.filter ul {
+	list-style: none;
+}
+
+.filter li{
+	display: block;
+	float: left;
+	padding: 12px;
+}
+
+.filter li p {
+	padding-top: 7px;
+}
+
+td {
+	width: 50px;
+}
+
+.tableHead {
+	font-weight: bold;
+	border-bottom: 3px solid grey;
+	height: 50px;
+	text-align: center;
+	background-color: #95a5a6;
+}
+
+.tableHead p {
+	padding-top: 10px;
+}
+
+table p {
+	padding-top: 5px;
+	text-align: center;
+}
+
+.taken {
+	opacity: 0.3;
+}
+
+.taken .price p{
+	visibility: hidden;
+}
+
+.hiddenElement {
+	display: none;
+}
+
+
+
+/*       2 izbovy           */
+.gallery .row {
+	position: relative;
+}
+
+.gallery .row img {
+	width: 100%;
+}
+
+#rozmery {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	display: none;
+}
+
+#arrow {
+	cursor: pointer;
+	position: absolute;
+	top: 48%;
+	width: 130px;
+	padding: 16px;
+	margin-top: -22px;
+	transition: 0.2s;
+}
+
+#arrow:hover {
+	width: 133px;
+}
+
+.gallery button {
+	position: absolute;
+	top: 60%;
+	left: 20px;
+	padding: 15px;
+	background-color: #f1c40f;
+	border: 0px;
+	border-radius: 5px;
+}
+
+.break {
+	height: 20px;
+	background-color: #f1c40f;
+}
+
+.shock {
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #f1c40f;
+	padding: 50px;
+	z-index: 500;
+}
+
+.text {
+	position: absolute;
+	bottom: 25%;
+	right: 30px;
+	width: 400px;
+	height: 250px;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 25px;
+	font-weight: bold;
+	border-radius: 4px;
+}
+
+
