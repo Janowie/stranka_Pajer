@@ -13,12 +13,12 @@ function initMap() {
 		{
 		  featureType: 'administrative.locality',
 		  elementType: 'labels.text.fill',
-		  stylers: [{color: '#000000'}]//
+		  stylers: [{color: 'white'}]//
 		},
 		{
 		  featureType: 'poi',
 		  elementType: 'labels.text.fill',
-		  stylers: [{color: '#e67e22'}]//firmy text vypln
+		  stylers: [{color: 'white'}]//firmy text vypln
 		},
 		{
 		  featureType: 'poi.park',
@@ -28,7 +28,7 @@ function initMap() {
 		{
 		  featureType: 'poi.park',
 		  elementType: 'labels.text.fill',
-		  stylers: [{color: '#000000'}]//
+		  stylers: [{color: 'white'}]
 		},
 		{
 		  featureType: 'road',
@@ -70,7 +70,7 @@ function initMap() {
 		{
 		  featureType: 'transit.station',
 		  elementType: 'labels.text.fill',
-		  stylers: [{color: '#d35400'}]
+		  stylers: [{color: 'green'}] //MENIM1
 		},
 		{
 		  featureType: 'water',
@@ -102,7 +102,39 @@ function initMap() {
 
 
 
+
+//		O PROJEKTE		//
+
+function copy() {
+	var copyText = "mail@bytyjurajovdvor.sk";
+	document.execCommand("copy");
+	alert("Email skopírovaný");
+  }	
+var change = 1;
+function showText(i) {
+	var openText = document.getElementsByClassName("toBeOpened");
+	var changeThis = document.getElementsByClassName("changeThis");
+	
+	$(openText[i]).toggle("slow");
+	if (change) {
+		changeThis.innerHTML = " - ";
+		change = 0;
+	}
+	else {
+		changeThis.innerHTML = " + ";
+		change = 1;
+	}
+	
+}
+
+
+
 //        BYTY A PARKOVANIE        //
+
+
+
+
+
 
 $(document).ready(function() {
 
@@ -462,6 +494,31 @@ function animateToggle(number, index, img) {
 //							K
 //								A
 
+// FINANCOVANIE
+
+var sliderA = document.getElementById("myRangeA");
+var outputA = document.getElementById("demoA");
+
+var sliderB = document.getElementById("myRangeB");
+var outputB = document.getElementById("demoB");
+
+var sliderC = document.getElementById("myRangeC");
+var outputC = document.getElementById("demoC");
+
+
+outputA.innerHTML = sliderA.value;
+outputB.innerHTML = sliderB.value;
+outputC.innerHTML = sliderC.value;
+
+sliderA.oninput = function() {
+  outputA.innerHTML = this.value;
+}
+sliderB.oninput = function() {
+  outputB.innerHTML = this.value / 10;
+}
+sliderC.oninput = function() {
+  outputC.innerHTML = this.value;
+}
 
 
 
@@ -471,10 +528,12 @@ function nOw() {
 	document.ten.submit();
 }
 
-function pocitej() {
+function calculate() {
 aa = parseInt(document.ten.a01.value);
-ab = parseInt(document.ten.a02.value);
-ac = parseInt(document.ten.a04.value);	//dlzka v rokoch
+//ab = parseInt(document.ten.a02.value);  ///////////////////////////////////////////    VYSKA UVERU    //////////////////////////////////////////
+ab = parseInt(sliderA.value);
+//ac = parseInt(document.ten.a04.value);	//dlzka v rokoch
+ac = parseInt(sliderC.value);
 ad = parseInt(document.ten.a05.value); //options[document.ten.a05.selectedIndex].
 ae = "0"; //parseInt(document.ten.a09.value);
 ai = parseInt(document.ten.a12.value);
@@ -487,8 +546,12 @@ as = parseInt(document.ten.a18.value);
 av = parseInt(document.ten.a21.value);
 document.ten.a03.value = Math.round((ab/70)*100);
 
-af = document.ten.a06.value;
-af = af.replace(",",".");
+//af = document.ten.a06.value;    ////////////////////////////////////////////////////   PERCENTO UROK   //////////////////////////////////////////
+af = sliderB.value;
+//af = af.replace(",",".");
+
+
+
 //if (document.ten.a09.options[document.ten.a09.selectedIndex].value == 0)
 //ae = 0;
 
@@ -497,7 +560,8 @@ za = (((af/100) / 12 * (365.25 / 360))+1);
 zb = ac * 12;
 zc = Math.pow(za,zb);
 ag = Math.round(ab * zc * (1-za) / (1-zc));
-document.ten.a07.value = ag;
+//document.ten.a07.value = ag; ///////////////////////////////////////////////////////     VYSLEDNA    ////////////////////////////////////////////////
+document.getElementById("result").innerHTML = ag;
 document.ten.askk.value = Math.round(ag*30.126);
 
 // - SFP
@@ -557,4 +621,8 @@ document.ten.a25.value = bh;
 
 }
 // -->
+
+
+
+
 
