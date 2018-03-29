@@ -10,6 +10,15 @@ body {
 
 a, a:hover {
 	text-decoration: none;
+	cursor: pointer;
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	color: #f1c40f;
 }
 
 h3 {
@@ -40,6 +49,10 @@ h3 {
 
 .center {
 	margin: 0px auto 0px auto;
+}
+
+.outline {
+	border: 2px dotted black;
 }
 
 
@@ -175,6 +188,7 @@ footer {
 
 /* FRONT PAGE */
 
+
 .frontImg {
 	width: 100%;
 }
@@ -217,6 +231,60 @@ footer {
 .highLightSmall img {
 	width: 200px;
 }
+
+.frontSymbol {
+	width: 100px;
+	margin: auto;
+}
+
+.hover:hover {
+	cursor: pointer;
+	background-color: #f1c40f;
+	transition: 0.3s ease-in-out;
+	border-radius: 3px;
+}
+
+/*    O PROJEKTE     */
+
+.mapOprojekte {
+	height: 700px !important;
+}
+
+.customMapMarker {
+	width: 70px;
+}
+
+.firstTr:hover {
+	background-color: #8e44ad;
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+.secondTr:hover {
+	background-color: #e74c3c;
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+.thirdTr:hover {
+	background-color: #16a085;
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+.fourthTr:hover {
+	background-color: #2980b9;
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+.fiftTr:hover {
+	background-color: #7f8c8d;
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.toBeOpened {
+	display: none;
+}
+
+
 
 
 
@@ -432,6 +500,20 @@ footer {
 .area4Tag {
 	top: 45%;
 	opacity: 0;
+}
+
+.bytyTable .tr {
+	cursor: pointer;
+}
+
+.tdTableArrow {
+ background-color: #f1c40f;
+ width: 20px !important;
+}
+.tableArrow {
+	width: 50px;
+	cursor: pointer;
+	margin: auto;
 }
 
 /* SWITCH */

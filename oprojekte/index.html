@@ -1,0 +1,203 @@
+<!-- CONTACTS -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> RJD </title>
+	<link rel="icon" type="image/png" sizes="16x16" href="../images/logo_icon.png">
+    
+	<!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- own -->
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	
+	<!--  Fonts  -->
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+	
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkcPwb6rpDAINfbgSmTWBdzCQVkwJCwCA&callback=initMap">
+    </script>
+  </head>
+  <body>
+   
+   <nav>
+		<div class="container">
+			
+			
+			<ul>
+				<li><a class="navBrand" href="../index.html"> Byty Jurajov dvor </a></li>
+				<li><img class="navLogo" src="../images/logo.png" alt="logo" /></li>
+				<li style="float: right;" class="navButton">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navCollapse" aria-expanded="false">
+						<div class="menuToggler"></div>
+						<div class="menuToggler"></div>
+					</button>
+				</li>
+				<div class="collapse navbar-collapse" id="navCollapse">
+					<li><a href="index.html"> O projekte </a></li>
+					<li><a href="../byty/index.html"> Byty a parkovanie</a></li>
+					<li><a href="../financovanie/index.html"> Financovanie </a></li>
+					<li><a href="../kontakty/index.html"> Kontakty </a></li>
+				</div>
+				
+			</ul>
+        </div>
+    </nav>
+	
+	<p class="space"> O projekte </p>
+
+	<div class="row" style="margin-top: 70px; margin-bottom: 70px;">
+			<div class="col-lg-4 hover">
+				<img src="../images/symbol_Dostupnost.png" alt="carSymbol" class="frontSymbol img-responsive"/>
+				<p class="text-center">
+					<br><b>Blesková dostupnosť</b><br><br>
+					V centre mesta budete za <b>10 minút</b>!
+				</p>
+			</div>
+			<div class="col-lg-4 hover">
+				<img src="../images/symbol_Tool.png" alt="carSymbol" class="frontSymbol img-responsive"/>
+				<p class="text-center">
+					<br><b>Prvotriedne spracovanie</b><br><br>
+					Projekt, ktorý si na kvalite zakladá.<b></b>
+				</p>
+			</div>
+			<div class="col-lg-4 hover">
+				<img src="../images/symbol_Human.png" alt="carSymbol" class="frontSymbol img-responsive"/>
+				<p class="text-center">
+					<br><b>Rodinné prostredie</b><br><br>
+					Iba 32 bytov a <b>vlastný park</b>.
+				</p>
+			</div>
+		</div>
+
+
+	<div class="row">
+		<div class="col-lg-8" style="margin: 0px;">
+			<div id="map" class="mapOprojekte"></div>
+		</div>
+		<div class="col-lg-4" style="margin-left: -10px;">
+			<h2 class="text-center">Lokalita</h2>
+			
+			<table class="table" style="margin-top:50px; text-align:center;">
+				<tr class="firstTr">
+					<td><p style="padding-top: 20px;">Obchod</p></td>
+					<td><img src="../images/map_marker_shop.png" alt="symbolShop" class="customMapMarker"></td>
+				</tr>
+				<tr class="secondTr">
+					<td><p style="padding-top: 20px;">Lekárenské zariadenie</p></td>
+					<td><img src="../images/map_marker_doctor.png" alt="symbolShop" class="customMapMarker"></td>
+				</tr>
+				<tr class="thirdTr">
+					<td><p style="padding-top: 20px;">Banka</p></td>
+					<td><img src="../images/map_marker_bank.png" alt="symbolShop" class="customMapMarker"></td>
+				</tr>
+				<!--<tr>
+					<td>Škola</td>
+					<td><img src="../images/map_marker" alt="symbolShop"></td>
+				</tr>-->
+				<tr class="fourthTr">
+					<td><p style="padding-top: 20px;">Reštaurácia</p></td>
+					<td><img src="../images/map_marker_restaurant.png" alt="symbolRestauracia" class="customMapMarker"></td>
+				</tr>
+				<tr class="fiftTr">
+					<td><p style="padding-top: 20px;">Šport</p></td>
+					<td><img src="../images/map_marker_sport.png" alt="symbolOddych" class="customMapMarker"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<div class="container" style="margin-top: 50px;">
+	<div class="row" style="text-align:center;">
+		<h1 class="text-center" style="padding-bottom: 10px;">Štandard<br></h1>
+		<div class="col-lg-6" style="border-right: 1px dotted black;">
+			<a onclick="showText(0)">
+				<h2><b><span class="changeThis"> +</span></b> Okná </h2>
+			</a>
+			<p class="toBeOpened">
+				JUHUHUHUHUHHUH
+			</p>
+			<a onclick="showText(1)">
+				<h2> <b><span class="changeThis"> +</span></b> Podlahy </h2>
+			</a>
+			<p class="toBeOpened">
+				JUHUHUHUHUHHUH
+			</p>
+
+			<a onclick="showText(2)">
+				<h2> <b><span class="changeThis"> +</span></b> Dvere </h2>
+			</a>
+			<p class="toBeOpened">
+				JUHUHUHUHUHHUH
+			</p>
+		</div>
+		<div class="col-lg-6" style="border-left: 1px dotted black;">
+				<a onclick="showText(3)">
+					<h2><b><span class="changeThis"> +</span></b> Priečky </h2>
+				</a>
+				<p class="toBeOpened">
+					JUHUHUHUHUHHUH
+				</p>
+				<a onclick="showText(4)">
+					<h2> <b><span class="changeThis"> +</span></b> Kúrenie </h2>
+				</a>
+				<p class="toBeOpened">
+					JUHUHUHUHUHHUH
+				</p>
+	
+				<a onclick="showText(5)">
+					<h2> <b><span class="changeThis"> +</span></b> Vzduchotechnika </h2>
+				</a>
+				<p class="toBeOpened">
+					JUHUHUHUHUHHUH
+				</p>
+			</div>
+		
+		
+	</div>
+</div>
+	
+	
+<div style="height: 200px;"></div>
+	
+
+	
+	<footer>
+		<div class="row">
+			<div class="col-lg-4">
+				<h2 style="padding: 25px 0px 0px 20%;">Developer</h2>
+				<p style="padding: 0px 0px 0px 20%;">
+					Byty Jurajov dvor, s.r.o.<br>
+					Vajnorská 28, <br>
+					805 12, Bratislava
+				</p>
+			</div>
+			<div class="col-lg-4" style="padding-top: 40px;">
+				<!--<h2 class="text-center" style="margin-top: 0px; color: white;">Byty Jurajov dvor</h2>-->
+				<img src="../images/logoKruh.png" style="width: 95px; display: block; margin: auto; padding-top: 10px;" alt="logoDeveloper"/>
+			</div>
+			<div class="col-lg-4" style="padding: 25px 0px 0px 15%;">
+				<h2>Kontakty</h2>
+				<p>
+					<a href="tel:0905123456" style="color:black;">0905 123 456</a> <br>
+					<span onclick="copy()" style="cursor: pointer;">EMAIL</span> <br>
+					FACEBOOK
+				</p>
+			</div>
+		</div>
+	</footer>	
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../script.js"></script>
+  </body>
+</html>
