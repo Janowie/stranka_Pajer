@@ -49,6 +49,8 @@
         </div>
 	</nav>
 
+<div id="bytyBody">
+
 	<div class="container smallNav" style="text-align:center;">
 		<div class="col-lg-2"></div>
 		<div class="col-lg-4">
@@ -77,12 +79,12 @@
 			<div class="area3" id="mapByty"></div>
 			<div class="area4" id="mapByty"></div>
 
-			<div class="area1Tag" id="Tag"><p><br><b> 6 </b></p></div>
-			<div class="area2Tag" id="Tag"><p><br><b> 4 </b></p></div>
+			<div class="area1Tag" id="Tag"><p><br><b> 7 </b></p></div>
+			<div class="area2Tag" id="Tag"><p><br><b> 7 </b></p></div>
 			<div class="area3Tag" id="Tag"><p><br><b> 8 </b></p></div>
-			<div class="area4Tag" id="Tag"><p><br><b> 2 </b></p></div>
+			<div class="area4Tag" id="Tag"><p><br><b> 8 </b></p></div>
 		
-		<img src="../images/bytyFront.jpg" alt="vizualizacia" style="width: 100%;"/>
+		<img src="../images/bytyFront.jpg" alt="vizualizacia" style="width: 100%; border-radius: 3px;"/>
 		
 	</div>
 	
@@ -160,33 +162,35 @@
 					<td style=" width: 20px !important;"></td>
 				</tr>
 				
-				<tr class="oneRoom taken" id="">
+				<tr class="room oneRoom" id="1"> <!-- add class taken -->
 					<td>
-						<p>1.</p>
+						<p class="flat1">1.</p>
+					</td>
+					<td >
+						<p class="flat1">#1Z1</p>
+					</td>
+					<td >
+						<p class="flat1">1</p>
+					</td>
+					<td >
+						<p class="flat1">60 m<sup>2</sup></p>
+					</td>
+					<td >
+						<p class="flat1">10 m<sup>2</sup></p>
+					</td>
+					<td >
+						<p class="flat1">70 m<sup>2</sup></p>
+					</td>
+					<td >
+						<p class="flat1">150 000€</p>
 					</td>
 					<td>
-						<p>#1Z1</p>
-					</td>
-					<td>
-						<p>1</p>
-					</td>
-					<td>
-						<p>60 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>10 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>70 m<sup>2</sup></p>
-					</td>
-					<td class="price">
-						<p>140 000€</p>
-					</td>
-					<td>
-						<p>Predané</p>
+						<p>Voľné</p>
 					</td>
 					<td class="tdTableArrow col-md-3">
-						<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
+						<a onclick="transform(1)">
+							<img src="../images/arrowRight.png" class="tableArrow img-responsive"/>
+						</a>
 					</td>
 				</tr>
 
@@ -647,10 +651,45 @@
 		</div>
 	
 	</div>
+
+	<div class="container" style="width: 70%;">
+		<h1 class="text-center">Parkovanie</h1>
+		<img src="../images/parkovanie.png" alt="parkovanie" style="width: 80%; margin-top: 30px;"/>
+		<div class="container" style="width: 110px; margin-top: 30px;">
+			<div class="legend1" style="margin-top: 5px;"></div>
+			<p style="float: right;"> obsadené </p>
+		</div>
+		<div class="container" style="width: 110px; margin-top: 5px;">
+			<div class="legend2" style="margin-top: 5px;"></div>
+			<p style="float: right;"> rezervované </p>
+		</div>
+	</div>
+	
 	
 	
 	<div style="height: 100px;">
 		</div>
+
+	<div class="container" >
+		<div class="row">
+			<div class="col-lg-6">
+				<ul class="thisFlat">
+					<li><p id="thisfloor"></p></li>
+					<li><p id="thisroomID"></p></li>
+					<li><p id="thisnumberOfRooms"></p></li>
+					<li><p id="thissize"></p></li>
+					<li><p id="thissizeLoggia"></p></li>
+					<li><p id="thistotalSize"></p></li>
+					<li><p id="thisprice"></p></li>
+				</ul>
+			</div>
+			<div class="col-lg-6">
+
+			</div>
+		</div>
+	</div>
+
+</div>
 	
 		<footer>
 			<div class="row">

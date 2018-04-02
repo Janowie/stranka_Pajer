@@ -441,9 +441,9 @@ footer {
 
 #mapByty {
 	position: absolute;
-	left: 15%;
-	width: 65%;
-	height: 12%;
+	left: 22%;
+	width: 50%;
+	height: 10%;
 	cursor: pointer;
 	border-radius: 5px; 
 }
@@ -451,7 +451,7 @@ footer {
 #Tag {
 	position: absolute;
 	background-color: rgba(241,196,15,0.9);
-	right: 10%;
+	right: 17%;
 	width: 80px;
 	height: 80px;
 	border-radius: 50px;
@@ -465,7 +465,7 @@ footer {
 
 .area1 {
 	background-color: #f1c40f;
-	top: 6%;
+	top: 8%;
 	opacity: 0;
 }
 
@@ -476,29 +476,29 @@ footer {
 
 .area2 {
 	background-color: #f1c40f;
-	top: 19%;
+	top: 18.5%;
 	opacity: 0;
 }
 .area2Tag {
-	top: 21%;
+	top: 18.5%;
 	opacity: 0;
 }
 .area3 {
 	background-color: #f1c40f;
-	top: 30.5%;
+	top: 28%;
 	opacity: 0;
 }
 .area3Tag {
-	top: 32.5%;
+	top: 28%;
 	opacity: 0;
 }
 .area4 {
 	background-color: #f1c40f;
-	top: 43%;
+	top: 38%;
 	opacity: 0;
 }
 .area4Tag {
-	top: 45%;
+	top: 38%;
 	opacity: 0;
 }
 
@@ -628,7 +628,34 @@ table p {
 	display: none;
 }
 
+.legend1 {
+	width: 10px; 
+	height: 10px; 
+	background-color: #f1c40f;
+	float: left;
+	margin-top: 5px;
+}
 
+.legend2 {
+	width: 10px; 
+	height: 10px; 
+	background-color: #04a22d;
+	float: left;
+
+}
+
+.thisFlat {
+	width: 50%;
+	float: right;
+	list-style-type: none;
+	padding: 5px;
+	text-align: center;
+}
+
+.thisFlat li {
+	border: 1px solid black;
+	padding: 10px;
+}
 
 /*       2 izbovy           */
 .gallery .row {

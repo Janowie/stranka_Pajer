@@ -53,37 +53,102 @@
 	
 	<p class="space"> O projekte </p>
 
-	<div class="row" style="margin-top: 70px; margin-bottom: 70px;">
-			<div class="col-lg-4 hover">
-				<img src="../images/symbol_Dostupnost.png" alt="carSymbol" class="frontSymbol img-responsive"/>
-				<p class="text-center">
-					<br><b>Blesková dostupnosť</b><br><br>
-					V centre mesta budete za <b>10 minút</b>!
-				</p>
+	<!-- PROSTREDIE -->
+		<img src="../images/symbol_Human.png" alt="carSymbol" class="frontSymbol img-responsive"/>
+		<h1 class="text-center" style="margin-bottom: 50px;">Rodinné prostredie</h1>
+		<div class="row" style="margin-bottom: 100px;">
+			<div class="col-lg-5">
+				<div class="container" style="width: 70%;">
+					<p>
+						<br>
+						Ako jeden z mála projektov v Bratislave Vám Jurajov dvor ponúka
+						vlastný park s rozlohou 550m<sup>2</sup>, v ktorom sa nachádza aj
+						altánok na grilovanie a detské ihrisko. Robíme to v súlade s 
+						našou víziou poskytnúť pocit domova v rušnej Bratislave.
+						<br><br>
+					</p>
+				</div>
 			</div>
-			<div class="col-lg-4 hover">
-				<img src="../images/symbol_Tool.png" alt="carSymbol" class="frontSymbol img-responsive"/>
-				<p class="text-center">
-					<br><b>Prvotriedne spracovanie</b><br><br>
-					Projekt, ktorý si na kvalite zakladá.<b></b>
-				</p>
-			</div>
-			<div class="col-lg-4 hover">
-				<img src="../images/symbol_Human.png" alt="carSymbol" class="frontSymbol img-responsive"/>
-				<p class="text-center">
-					<br><b>Rodinné prostredie</b><br><br>
-					Iba 32 bytov a <b>vlastný park</b>.
-				</p>
+			<div class="col-lg-7">
+				<img src="../images/vizualizaciaFront2.jpg" alt="park" style="width: 100%; border-radius: 5px;"/>
 			</div>
 		</div>
 
+	<!-- SPRACOVANIE -->
+		<img src="../images/symbol_Tool.png" alt="carSymbol" class="frontSymbol img-responsive"/>
+		<h1 class="text-center" style="margin-bottom: 50px;">Štandard</h1>
+		<div class="container" style="width: 50%; margin-bottom: 100px;">
+			<!--<p>
+				Pri budovaní tohto projektu starostlivo vyberáme všetky
+				materiály, aby si každý byt zachoval svoju jedinečnú kvalitu
+				dĺhé roky.
+			</p>-->
+		
+			<div class="row" style="text-align:center;">
+				<div class="col-lg-6" style="border-right: 1px dotted black;">
+					<a onclick="showText(0)">
+						<h2><b><span class="changeThis"> +</span></b> Okná </h2>
+					</a>
+					<p class="toBeOpened">
+						JUHUHUHUHUHHUH
+					</p>
+					<a onclick="showText(1)">
+						<h2> <b><span class="changeThis"> +</span></b> Podlahy </h2>
+					</a>
+					<p class="toBeOpened">
+						JUHUHUHUHUHHUH
+					</p>
+
+					<a onclick="showText(2)">
+						<h2> <b><span class="changeThis"> +</span></b> Dvere </h2>
+					</a>
+					<p class="toBeOpened">
+						JUHUHUHUHUHHUH
+					</p>
+				</div>
+				<div class="col-lg-6" style="border-left: 1px dotted black;">
+						<a onclick="showText(3)">
+							<h2><b><span class="changeThis"> +</span></b> Priečky </h2>
+						</a>
+						<p class="toBeOpened">
+							JUHUHUHUHUHHUH
+						</p>
+						<a onclick="showText(4)">
+							<h2> <b><span class="changeThis"> +</span></b> Kúrenie </h2>
+						</a>
+						<p class="toBeOpened">
+							JUHUHUHUHUHHUH
+						</p>
+			
+						<a onclick="showText(5)">
+							<h2> <b><span class="changeThis"> +</span></b> Vzduchotechnika </h2>
+						</a>
+						<p class="toBeOpened">
+							JUHUHUHUHUHHUH
+						</p>
+					</div>
+				
+				
+			</div>
+
+		</div>
+		
+	
+<!-- LOKALITA -->
+
+	<img src="../images/symbol_Dostupnost_1.png" alt="carSymbol" class="frontSymbol img-responsive"/>			
+	<h1 class="text-center" style="margin-bottom: 30px;">Lokalita</h1>
+	<p class="text-center" style="width: 70%; margin: auto;">
+			Jurajov dvor leží na dopravnom uzle, vďaka ktorému sa bez
+			menších problémov dostanete do meste už za 10 minút a to autom,
+			autobusom alebo električkou.
+	</p>
 
 	<div class="row">
 		<div class="col-lg-8" style="margin: 0px;">
 			<div id="map" class="mapOprojekte"></div>
 		</div>
 		<div class="col-lg-4" style="margin-left: -10px;">
-			<h2 class="text-center">Lokalita</h2>
 			
 			<table class="table" style="margin-top:50px; text-align:center;">
 				<tr class="firstTr">
@@ -114,61 +179,7 @@
 		</div>
 	</div>
 	
-	<div class="container" style="margin-top: 50px;">
-	<div class="row" style="text-align:center;">
-		<h1 class="text-center" style="padding-bottom: 10px;">Štandard<br></h1>
-		<div class="col-lg-6" style="border-right: 1px dotted black;">
-			<a onclick="showText(0)">
-				<h2><b><span class="changeThis"> +</span></b> Okná </h2>
-			</a>
-			<p class="toBeOpened">
-				JUHUHUHUHUHHUH
-			</p>
-			<a onclick="showText(1)">
-				<h2> <b><span class="changeThis"> +</span></b> Podlahy </h2>
-			</a>
-			<p class="toBeOpened">
-				JUHUHUHUHUHHUH
-			</p>
 
-			<a onclick="showText(2)">
-				<h2> <b><span class="changeThis"> +</span></b> Dvere </h2>
-			</a>
-			<p class="toBeOpened">
-				JUHUHUHUHUHHUH
-			</p>
-		</div>
-		<div class="col-lg-6" style="border-left: 1px dotted black;">
-				<a onclick="showText(3)">
-					<h2><b><span class="changeThis"> +</span></b> Priečky </h2>
-				</a>
-				<p class="toBeOpened">
-					JUHUHUHUHUHHUH
-				</p>
-				<a onclick="showText(4)">
-					<h2> <b><span class="changeThis"> +</span></b> Kúrenie </h2>
-				</a>
-				<p class="toBeOpened">
-					JUHUHUHUHUHHUH
-				</p>
-	
-				<a onclick="showText(5)">
-					<h2> <b><span class="changeThis"> +</span></b> Vzduchotechnika </h2>
-				</a>
-				<p class="toBeOpened">
-					JUHUHUHUHUHHUH
-				</p>
-			</div>
-		
-		
-	</div>
-</div>
-	
-	
-<div style="height: 200px;"></div>
-	
-
-	
 	<footer>
 		<div class="row">
 			<div class="col-lg-4">

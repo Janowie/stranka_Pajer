@@ -242,6 +242,19 @@ $(document).ready(function() {
 });
 
 
+function transform(n) {
+	var flatInfo = document.getElementById(n).querySelectorAll(".flat" + n);
+	//$("#bytyBody").hide();
+	//$(".thisFlat").show();
+	//alert(flatInfo[0].innerHTML + " piseem")
+	document.getElementById("thisfloor").innerHTML= "Podlažie: " + flatInfo[0].innerHTML;
+	document.getElementById("thisroomID").innerHTML= "Číslo bytu: " + flatInfo[1].innerHTML;
+	document.getElementById("thisnumberOfRooms").innerHTML= "Počet izieb: " + flatInfo[2].innerHTML;
+	document.getElementById("thissize").innerHTML= "Rozľoha: " + flatInfo[3].innerHTML;
+	document.getElementById("thissizeLoggia").innerHTML= "Rozľoha loggia: " + flatInfo[4].innerHTML;
+	document.getElementById("thistotalSize").innerHTML= "Celková rozľoha: " + flatInfo[5].innerHTML;
+	document.getElementById("thisprice").innerHTML= "Cena s DPH: " + flatInfo[6].innerHTML;
+}
 
 
 
