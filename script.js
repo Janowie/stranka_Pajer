@@ -244,16 +244,31 @@ $(document).ready(function() {
 
 function transform(n) {
 	var flatInfo = document.getElementById(n).querySelectorAll(".flat" + n);
-	//$("#bytyBody").hide();
-	//$(".thisFlat").show();
-	//alert(flatInfo[0].innerHTML + " piseem")
+	var num = parseInt(flatInfo[0].innerHTML); // cislo poschodia
+
+	$("#bytyBody").hide();
+	$(".detailBox").show();
+
+	// Flat information
 	document.getElementById("thisfloor").innerHTML= "Podlažie: " + flatInfo[0].innerHTML;
 	document.getElementById("thisroomID").innerHTML= "Číslo bytu: " + flatInfo[1].innerHTML;
 	document.getElementById("thisnumberOfRooms").innerHTML= "Počet izieb: " + flatInfo[2].innerHTML;
-	document.getElementById("thissize").innerHTML= "Rozľoha: " + flatInfo[3].innerHTML;
-	document.getElementById("thissizeLoggia").innerHTML= "Rozľoha loggia: " + flatInfo[4].innerHTML;
-	document.getElementById("thistotalSize").innerHTML= "Celková rozľoha: " + flatInfo[5].innerHTML;
+	document.getElementById("thissize").innerHTML= "Plocha: " + flatInfo[3].innerHTML;
+	document.getElementById("thissizeLoggia").innerHTML= "Plocha loggia: " + flatInfo[4].innerHTML;
+	document.getElementById("thistotalSize").innerHTML= "Celková plocha: " + flatInfo[5].innerHTML;
 	document.getElementById("thisprice").innerHTML= "Cena s DPH: " + flatInfo[6].innerHTML;
+	
+	// Flat image
+	$("#thisImg").attr("src", "../images/" + num + "_poschodie.jpg"); 
+	// pozor, innerHTML berie cele vnutro aj s medzerami
+}
+
+function backByty() {
+	$("#bytyBody").show();
+	$(".detailBox").hide();
+	$('html, body').animate({
+        scrollTop: $(".scrollHere").offset().top
+    }, 1000);
 }
 
 

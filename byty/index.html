@@ -49,7 +49,30 @@
         </div>
 	</nav>
 
+
+
+		<div class="container detailBox">
+			<button onclick="backByty()" style="position: absolute; top: 100px; left: 100px;"> BACK </button>
+			<div class="row">
+				<div class="col-lg-6">
+					<ul class="thisFlat">
+						<li><p id="thisfloor"></p></li>
+						<li><p id="thisroomID"></p></li>
+						<li><p id="thisnumberOfRooms"></p></li>
+						<li><p id="thissize"></p></li>
+						<li><p id="thissizeLoggia"></p></li>
+						<li><p id="thistotalSize"></p></li>
+						<li><p id="thisprice"></p></li>
+					</ul>
+				</div>
+				<div class="col-lg-6">
+					<img id="thisImg">
+				</div>
+			</div>
+		</div>
+
 <div id="bytyBody">
+	
 
 	<div class="container smallNav" style="text-align:center;">
 		<div class="col-lg-2"></div>
@@ -93,7 +116,7 @@
 	
 	<div class="container">
 		
-		<h2 class="text-center"> Cenník </h2>
+		<h2 class="text-center scrollHere"> Cenník </h2>
 		
 		<div class="container filter">
 		
@@ -133,6 +156,7 @@
 
 	
 		<div class="">
+
 			<table class="table table-striped bytyTable">
 				<tr class="tableHead">
 					<td>
@@ -162,27 +186,28 @@
 					<td style=" width: 20px !important;"></td>
 				</tr>
 				
-				<tr class="room oneRoom" id="1"> <!-- add class taken -->
+				<!-- add class taken for sold -->
+				<tr class="room twoRoom" id="1"> 
 					<td>
 						<p class="flat1">1.</p>
 					</td>
 					<td >
-						<p class="flat1">#1Z1</p>
+						<p class="flat1">#1D1</p>
 					</td>
 					<td >
-						<p class="flat1">1</p>
+						<p class="flat1">2</p>
 					</td>
 					<td >
-						<p class="flat1">60 m<sup>2</sup></p>
+						<p class="flat1">58,45 m<sup>2</sup></p>
 					</td>
 					<td >
-						<p class="flat1">10 m<sup>2</sup></p>
+						<p class="flat1">5,97 m<sup>2</sup></p>
 					</td>
 					<td >
-						<p class="flat1">70 m<sup>2</sup></p>
+						<p class="flat1">64,42 m<sup>2</sup></p>
 					</td>
 					<td >
-						<p class="flat1">150 000€</p>
+						<p class="flat1">???€</p>
 					</td>
 					<td>
 						<p>Voľné</p>
@@ -194,457 +219,197 @@
 					</td>
 				</tr>
 
-				<tr class="oneRoom taken" id="">
+				<tr class="twoRoom" id="2">
 					<td>
-						<p>1.</p>
+						<p class="flat2">1.</p>
 					</td>
 					<td>
-						<p>#1Z1</p>
+						<p class="flat2">#1D2</p>
 					</td>
 					<td>
-						<p>1</p>
+						<p class="flat2">2</p>
 					</td>
 					<td>
-						<p>60 m<sup>2</sup></p>
+						<p class="flat2">43,31 m<sup>2</sup></p>
 					</td>
 					<td>
-						<p>10 m<sup>2</sup></p>
+						<p class="flat2">12,98 m<sup>2</sup></p>
 					</td>
 					<td>
-						<p>70 m<sup>2</sup></p>
+						<p class="flat2">56,29 m<sup>2</sup></p>
 					</td>
 					<td class="price">
-						<p>140 000€</p>
-					</td>
-					<td>
-						<p>Predané</p>
-					</td>
-					<td class="tdTableArrow col-md-3">
-						<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
-					</td>
-				</tr>
-
-				<tr class="oneRoom taken" id="">
-					<td>
-						<p>1.</p>
-					</td>
-					<td>
-						<p>#1Z1</p>
-					</td>
-					<td>
-						<p>1</p>
-					</td>
-					<td>
-						<p>60 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>10 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>70 m<sup>2</sup></p>
-					</td>
-					<td class="price">
-						<p>140 000€</p>
-					</td>
-					<td>
-						<p>Predané</p>
-					</td>
-					<td class="tdTableArrow col-md-3">
-						<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
-					</td>
-				</tr>
-
-				<tr class="oneRoom taken" id="">
-					<td>
-						<p>1.</p>
-					</td>
-					<td>
-						<p>#1Z1</p>
-					</td>
-					<td>
-						<p>1</p>
-					</td>
-					<td>
-						<p>60 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>10 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>70 m<sup>2</sup></p>
-					</td>
-					<td class="price">
-						<p>140 000€</p>
-					</td>
-					<td>
-						<p>Predané</p>
-					</td>
-					<td class="tdTableArrow col-md-3">
-						<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
-					</td>
-				</tr>
-
-				<tr class="twoRoom">
-					<td>
-						<p>1.</p>
-					</td>
-					<td>
-						<p>#2S1</p>
-					</td>
-					<td>
-						<p>2</p>
-					</td>
-					<td>
-						<p>60 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>10 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>70 m<sup>2</sup></p>
-					</td>
-					<td class="price">
-						<p>140 000€</p>
+						<p class="flat2">???€</p>
 					</td>
 					<td>
 						<p>Voľné</p>
 					</td>
 					<td class="tdTableArrow col-md-3">
-						<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
+						<a onclick="transform(2)">
+							<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
+						</a>
 					</td>
 				</tr>
 
-				<tr class="twoRoom">
+				<tr class="oneRoom" id="3">
 					<td>
-						<p>1.</p>
+						<p class="flat3">1.</p>
 					</td>
 					<td>
-						<p>#2S1</p>
+						<p class="flat3">#1J3</p>
 					</td>
 					<td>
-						<p>2</p>
+						<p class="flat3">1</p>
 					</td>
 					<td>
-						<p>60 m<sup>2</sup></p>
+						<p class="flat3">41,48 m<sup>2</sup></p>
 					</td>
 					<td>
-						<p>10 m<sup>2</sup></p>
+						<p class="flat3">6,10 m<sup>2</sup></p>
 					</td>
 					<td>
-						<p>70 m<sup>2</sup></p>
+						<p class="flat3">47,58 m<sup>2</sup></p>
 					</td>
 					<td class="price">
-						<p>140 000€</p>
+						<p class="flat3">???€</p>
 					</td>
 					<td>
 						<p>Voľné</p>
 					</td>
 					<td class="tdTableArrow col-md-3">
-						<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
+						<a onclick="transform(3)">
+							<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
+						</a>
 					</td>
 				</tr>
 
-				<tr class="twoRoom">
+				<tr class="oneRoom" id="4">
 					<td>
-						<p>1.</p>
+						<p class="flat4">1.</p>
 					</td>
 					<td>
-						<p>#2S1</p>
+						<p class="flat4">#1J4</p>
 					</td>
 					<td>
-						<p>2</p>
+						<p class="flat4">1</p>
 					</td>
 					<td>
-						<p>60 m<sup>2</sup></p>
+						<p class="flat4">29,12 m<sup>2</sup></p>
 					</td>
 					<td>
-						<p>10 m<sup>2</sup></p>
+						<p class="flat4">5,53 m<sup>2</sup></p>
 					</td>
 					<td>
-						<p>70 m<sup>2</sup></p>
+						<p class="flat4">34,65 m<sup>2</sup></p>
 					</td>
 					<td class="price">
-						<p>140 000€</p>
+						<p class="flat4">???€</p>
 					</td>
 					<td>
 						<p>Voľné</p>
 					</td>
 					<td class="tdTableArrow col-md-3">
-						<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
+						<a onclick="transform(4)">
+							<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
+						</a>
 					</td>
 				</tr>
 
-				<tr class="twoRoom">
+				<tr class="oneRoom" id="5">
 					<td>
-						<p>1.</p>
+						<p class="flat5">1.</p>
 					</td>
 					<td>
-						<p>#2S1</p>
+						<p class="flat5">#1J5</p>
 					</td>
 					<td>
-						<p>2</p>
+						<p class="flat5">1</p>
 					</td>
 					<td>
-						<p>60 m<sup>2</sup></p>
+						<p class="flat5">41,48 m<sup>2</sup></p>
 					</td>
 					<td>
-						<p>10 m<sup>2</sup></p>
+						<p class="flat5">6,10 m<sup>2</sup></p>
 					</td>
 					<td>
-						<p>70 m<sup>2</sup></p>
+						<p class="flat5">47,58 m<sup>2</sup></p>
 					</td>
 					<td class="price">
-						<p>140 000€</p>
+						<p class="flat5">???€</p>
 					</td>
 					<td>
 						<p>Voľné</p>
 					</td>
 					<td class="tdTableArrow col-md-3">
-						<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
+						<a onclick="transform(5)">
+							<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
+						</a>
 					</td>
 				</tr>
 
-				<tr class="oneRoom">
+				<tr class="oneRoom" id="6">
 					<td>
-						<p>2.</p>
+						<p class="flat6">1.</p>
 					</td>
 					<td>
-						<p>#1Z1</p>
+						<p class="flat6">#1J6</p>
 					</td>
 					<td>
-						<p>1</p>
+						<p class="flat6">1</p>
 					</td>
 					<td>
-						<p>60 m<sup>2</sup></p>
+						<p class="flat6">41,45 m<sup>2</sup></p>
 					</td>
 					<td>
-						<p>10 m<sup>2</sup></p>
+						<p class="flat6">6,04 m<sup>2</sup></p>
 					</td>
 					<td>
-						<p>70 m<sup>2</sup></p>
+						<p class="flat6">47,49 m<sup>2</sup></p>
 					</td>
 					<td class="price">
-						<p>140 000€</p>
+						<p class="flat6">???€</p>
 					</td>
 					<td>
 						<p>Voľné</p>
 					</td>
 					<td class="tdTableArrow col-md-3">
-						<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
+						<a onclick="transform(6)">
+							<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
+						</a>
 					</td>
 				</tr>
 
-				<tr class="oneRoom">
+				<tr class="oneRoom" id="7">
 					<td>
-						<p>2.</p>
+						<p class="flat7">1.</p>
 					</td>
 					<td>
-						<p>#1Z1</p>
+						<p class="flat7">#1J7</p>
 					</td>
 					<td>
-						<p>1</p>
+						<p class="flat7">1</p>
 					</td>
 					<td>
-						<p>60 m<sup>2</sup></p>
+						<p class="flat7">32,11 m<sup>2</sup></p>
 					</td>
 					<td>
-						<p>10 m<sup>2</sup></p>
+						<p class="flat7">0 m<sup>2</sup></p>
 					</td>
 					<td>
-						<p>70 m<sup>2</sup></p>
+						<p class="flat7">32,11 m<sup>2</sup></p>
 					</td>
 					<td class="price">
-						<p>140 000€</p>
+						<p class="flat7">???€</p>
 					</td>
 					<td>
 						<p>Voľné</p>
 					</td>
 					<td class="tdTableArrow col-md-3">
-						<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
+						<a onclick="transform(7)">
+							<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
+						</a>
 					</td>
 				</tr>
-
-				<tr class="oneRoom">
-					<td>
-						<p>2.</p>
-					</td>
-					<td>
-						<p>#1Z1</p>
-					</td>
-					<td>
-						<p>1</p>
-					</td>
-					<td>
-						<p>60 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>10 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>70 m<sup>2</sup></p>
-					</td>
-					<td class="price">
-						<p>140 000€</p>
-					</td>
-					<td>
-						<p>Voľné</p>
-					</td>
-					<td class="tdTableArrow col-md-3">
-						<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
-					</td>
-				</tr>
-
-				<tr class="oneRoom">
-					<td>
-						<p>2.</p>
-					</td>
-					<td>
-						<p>#1Z1</p>
-					</td>
-					<td>
-						<p>1</p>
-					</td>
-					<td>
-						<p>60 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>10 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>70 m<sup>2</sup></p>
-					</td>
-					<td class="price">
-						<p>140 000€</p>
-					</td>
-					<td>
-						<p>Voľné</p>
-					</td>
-					<td class="tdTableArrow col-md-3">
-						<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
-					</td>
-				</tr>
-
-				<tr class="twoRoom">
-					<td>
-						<p>2.</p>
-					</td>
-					<td>
-						<p>#2S1</p>
-					</td>
-					<td>
-						<p>2</p>
-					</td>
-					<td>
-						<p>60 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>10 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>70 m<sup>2</sup></p>
-					</td>
-					<td class="price">
-						<p>140 000€</p>
-					</td>
-					<td>
-						<p>Voľné</p>
-					</td>
-					<td class="tdTableArrow col-md-3">
-						<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
-					</td>
-				</tr>
-
-				<tr class="twoRoom">
-					<td>
-						<p>2.</p>
-					</td>
-					<td>
-						<p>#2S1</p>
-					</td>
-					<td>
-						<p>2</p>
-					</td>
-					<td>
-						<p>60 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>10 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>70 m<sup>2</sup></p>
-					</td>
-					<td class="price">
-						<p>140 000€</p>
-					</td>
-					<td>
-						<p>Voľné</p>
-					</td>
-					<td class="tdTableArrow col-md-3">
-						<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
-					</td>
-				</tr>
-
-				<tr class="twoRoom">
-					<td>
-						<p>2.</p>
-					</td>
-					<td>
-						<p>#2S1</p>
-					</td>
-					<td>
-						<p>2</p>
-					</td>
-					<td>
-						<p>60 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>10 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>70 m<sup>2</sup></p>
-					</td>
-					<td class="price">
-						<p>140 000€</p>
-					</td>
-					<td>
-						<p>Voľné</p>
-					</td>
-					<td class="tdTableArrow col-md-3">
-						<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
-					</td>
-				</tr>
-
-				<tr class="twoRoom">
-					<td>
-						<p>2.</p>
-					</td>
-					<td>
-						<p>#2S1</p>
-					</td>
-					<td>
-						<p>2</p>
-					</td>
-					<td>
-						<p>60 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>10 m<sup>2</sup></p>
-					</td>
-					<td>
-						<p>70 m<sup>2</sup></p>
-					</td>
-					<td class="price">
-						<p>140 000€</p>
-					</td>
-					<td>
-						<p>Voľné</p>
-					</td>
-					<td class="tdTableArrow col-md-3">
-						<img src="../images/arrowRight.png" class="tableArrow img-responsive" />
-					</td>
-				</tr>
-
-
 				
 
 			</table>
@@ -667,27 +432,9 @@
 	
 	
 	
-	<div style="height: 100px;">
-		</div>
+	<div style="height: 100px;"></div>
 
-	<div class="container" >
-		<div class="row">
-			<div class="col-lg-6">
-				<ul class="thisFlat">
-					<li><p id="thisfloor"></p></li>
-					<li><p id="thisroomID"></p></li>
-					<li><p id="thisnumberOfRooms"></p></li>
-					<li><p id="thissize"></p></li>
-					<li><p id="thissizeLoggia"></p></li>
-					<li><p id="thistotalSize"></p></li>
-					<li><p id="thisprice"></p></li>
-				</ul>
-			</div>
-			<div class="col-lg-6">
-
-			</div>
-		</div>
-	</div>
+	
 
 </div>
 	

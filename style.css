@@ -644,18 +644,21 @@ table p {
 
 }
 
-.thisFlat {
-	width: 50%;
-	float: right;
-	list-style-type: none;
-	padding: 5px;
-	text-align: center;
+#bytyBody {
 }
 
-.thisFlat li {
-	border: 1px solid black;
-	padding: 10px;
+.thisFlat {
+	width: 50%;
+	list-style-type: none;
+	padding: 5px;
 }
+#thisImg {
+	width: 100%;
+}
+.detailBox {
+	display: none;
+}
+
 
 /*       2 izbovy           */
 .gallery .row {
