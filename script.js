@@ -244,23 +244,29 @@ $(document).ready(function() {
 
 function transform(n) {
 	var flatInfo = document.getElementById(n).querySelectorAll(".flat" + n);
-	var num = parseInt(flatInfo[0].innerHTML); // cislo poschodia
+	var flatID = flatInfo[1].innerHTML;
 
-	$("#bytyBody").hide();
-	$(".detailBox").show();
+	// Show / hide
+	//$("#bytyBody").hide();
+	//$(".detailBox").show();
 
 	// Flat information
-	document.getElementById("thisfloor").innerHTML= "Podlažie: " + flatInfo[0].innerHTML;
-	document.getElementById("thisroomID").innerHTML= "Číslo bytu: " + flatInfo[1].innerHTML;
-	document.getElementById("thisnumberOfRooms").innerHTML= "Počet izieb: " + flatInfo[2].innerHTML;
-	document.getElementById("thissize").innerHTML= "Plocha: " + flatInfo[3].innerHTML;
-	document.getElementById("thissizeLoggia").innerHTML= "Plocha loggia: " + flatInfo[4].innerHTML;
-	document.getElementById("thistotalSize").innerHTML= "Celková plocha: " + flatInfo[5].innerHTML;
-	document.getElementById("thisprice").innerHTML= "Cena s DPH: " + flatInfo[6].innerHTML;
+	document.getElementById("thisFlatHeadline").innerHTML = "BYT <b>" + flatID + "</b>";
+	document.getElementById("thisfloor").innerHTML= "<b>Podlažie:</b> " + flatInfo[0].innerHTML;
+	document.getElementById("thisroomID").innerHTML= "<b>Kód bytu:</b> " + flatInfo[1].innerHTML;
+	document.getElementById("thisnumberOfRooms").innerHTML= "<b>Počet izieb:</b> " + flatInfo[2].innerHTML;
+	document.getElementById("thissize").innerHTML= "<b>Plocha:</b> " + flatInfo[3].innerHTML;
+	document.getElementById("thissizeLoggia").innerHTML= "<b>Plocha loggia:</b> " + flatInfo[4].innerHTML;
+	document.getElementById("thistotalSize").innerHTML= "<b>Celková plocha:</b> " + flatInfo[5].innerHTML;
+	document.getElementById("thisprice").innerHTML= "<b>Cena s DPH:</b> " + flatInfo[6].innerHTML;
 	
 	// Flat image
-	$("#thisImg").attr("src", "../images/" + num + "_poschodie.jpg"); 
-	// pozor, innerHTML berie cele vnutro aj s medzerami
+	$("#thisImg").attr("src", "../images/byt" + flatID + ".png"); 
+	
+	// Scroll to top
+	$('html, body').animate({
+        window:scrollTo(0,0)
+	}, 1000);
 }
 
 function backByty() {
@@ -272,6 +278,12 @@ function backByty() {
 }
 
 
+//$('#mapBytyFront').maphilight();
+
+
+function juhu() {
+	alert("JUHUU");
+}
 
 
 

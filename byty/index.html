@@ -50,11 +50,16 @@
 	</nav>
 
 
-
-		<div class="container detailBox">
-			<button onclick="backByty()" style="position: absolute; top: 100px; left: 100px;"> BACK </button>
-			<div class="row">
-				<div class="col-lg-6">
+	<!-- DETAIL BOX FLAT -->
+	<div class="container-fluid detailBox" style="min-height: 1800px;">
+			<img src="../images/arrowUpLeft.png" style="margin: 0px; height: 100px; cursor: pointer;" onclick="backByty()"/>
+		<div class="container">
+			<div class="thisFlatHeadlineBc" style="margin-top: -120px;">
+				<h1 id="thisFlatHeadline" class="text-center"></h1>
+			</div>
+			
+			<div class="row" style="margin: 100px auto 100px auto;">
+				<div class="col-lg-4">
 					<ul class="thisFlat">
 						<li><p id="thisfloor"></p></li>
 						<li><p id="thisroomID"></p></li>
@@ -65,14 +70,54 @@
 						<li><p id="thisprice"></p></li>
 					</ul>
 				</div>
-				<div class="col-lg-6">
-					<img id="thisImg">
+				<div class="col-lg-8">
+					<img id="thisImg" style="margin-top: 25px; width: 100%;">
 				</div>
 			</div>
+							
 		</div>
 
+			<div style="width: 100%; height: 9px; background-color: #f1c40f;" >
+
+			<!-- PARKOVANIE -->
+			<div class="container" style="width: 70%; margin-bottom: 50px;">
+				<div class="thisFlatHeadlineBc">
+					<h1 id="thisParkovanieHeadline" class="text-center">Parkovanie</h1>
+				</div>
+				<img src="../images/parkovanie.png" class="img-responsive" alt="parkovanie" style="margin: auto; width: 70%; margin-top: 30px;"/>
+					
+				<div class="container" style="width: 110px; margin-top: 30px;">
+					<div class="legend1" style="margin-top: 5px;"></div>
+					<p style="float: right;"> obsadené </p>
+				</div>
+				<div class="container" style="width: 110px; margin-top: 5px;">
+					<div class="legend2" style="margin-top: 5px;"></div>
+					<p style="float: right;"> voľné </p>
+				</div>
+			</div>
+			<!-- /PARKOVANIE -->
+
+
+			<!-- REZERVACIA -->
+			<div style="width: 100%; height: 9px; background-color: #f1c40f;" ></div>
+			<div class="container" style="width: 480px;">
+				<div class="thisFlatHeadlineBc" style="margin-bottom: 40px;">
+					<h1 id="thisParkovanieHeadline" class="text-center">Rezervácia</h1>
+				</div>
+				<p> 
+					Rezervácia bytu a parkovacieho miesta je možná na číslach: <br><br>
+					<span style="font-size: 17px; font-weight: bold;">
+					0905 609 333</span> (pán Pajer, riaditeľ) alebo <br>
+					<span style="font-size: 17px; font-weight: bold;">
+					0905 609 222</span> (pani Meszarošová, marketing).
+				</p>
+			</div>
+			<!-- /REZERVACIA -->
+
+		</div>
+	</div>
+
 <div id="bytyBody">
-	
 
 	<div class="container smallNav" style="text-align:center;">
 		<div class="col-lg-2"></div>
@@ -102,13 +147,16 @@
 			<div class="area3" id="mapByty"></div>
 			<div class="area4" id="mapByty"></div>
 
-			<div class="area1Tag" id="Tag"><p><br><b> 7 </b></p></div>
-			<div class="area2Tag" id="Tag"><p><br><b> 7 </b></p></div>
+			<div class="area1Tag" id="Tag"><p><br><b> 8 </b></p></div>
+			<div class="area2Tag" id="Tag"><p><br><b> 8 </b></p></div>
 			<div class="area3Tag" id="Tag"><p><br><b> 8 </b></p></div>
-			<div class="area4Tag" id="Tag"><p><br><b> 8 </b></p></div>
+			<div class="area4Tag" id="Tag"><p><br><b> 7 </b></p></div>
 		
-		<img src="../images/bytyFront.jpg" alt="vizualizacia" style="width: 100%; border-radius: 3px;"/>
+		<img src="../images/bytyFront.jpg" id="mapBytyFront" usemap="#map" alt="vizualizacia" style="width: 100%; border-radius: 3px;"/>
 		
+		<map name="map" id="map">
+			<area shape="rect" coords="0,0,300,300" data-maphilight="{'strokeColor':'0000ff','strokeWidth':5,'fillColor':'00ff00','fillOpacity':0.6}" alt="Sun" onclick="juhu()">
+		</map>
 	</div>
 	
 
@@ -192,7 +240,7 @@
 						<p class="flat1">1.</p>
 					</td>
 					<td >
-						<p class="flat1">#1D1</p>
+						<p class="flat1">1D1</p>
 					</td>
 					<td >
 						<p class="flat1">2</p>
@@ -224,7 +272,7 @@
 						<p class="flat2">1.</p>
 					</td>
 					<td>
-						<p class="flat2">#1D2</p>
+						<p class="flat2">1D2</p>
 					</td>
 					<td>
 						<p class="flat2">2</p>
@@ -256,7 +304,7 @@
 						<p class="flat3">1.</p>
 					</td>
 					<td>
-						<p class="flat3">#1J3</p>
+						<p class="flat3">1J3</p>
 					</td>
 					<td>
 						<p class="flat3">1</p>
@@ -288,7 +336,7 @@
 						<p class="flat4">1.</p>
 					</td>
 					<td>
-						<p class="flat4">#1J4</p>
+						<p class="flat4">1J4</p>
 					</td>
 					<td>
 						<p class="flat4">1</p>
@@ -320,7 +368,7 @@
 						<p class="flat5">1.</p>
 					</td>
 					<td>
-						<p class="flat5">#1J5</p>
+						<p class="flat5">1J5</p>
 					</td>
 					<td>
 						<p class="flat5">1</p>
@@ -352,7 +400,7 @@
 						<p class="flat6">1.</p>
 					</td>
 					<td>
-						<p class="flat6">#1J6</p>
+						<p class="flat6">1J6</p>
 					</td>
 					<td>
 						<p class="flat6">1</p>
@@ -384,7 +432,7 @@
 						<p class="flat7">1.</p>
 					</td>
 					<td>
-						<p class="flat7">#1J7</p>
+						<p class="flat7">1J7</p>
 					</td>
 					<td>
 						<p class="flat7">1</p>
@@ -426,7 +474,7 @@
 		</div>
 		<div class="container" style="width: 110px; margin-top: 5px;">
 			<div class="legend2" style="margin-top: 5px;"></div>
-			<p style="float: right;"> rezervované </p>
+			<p style="float: right;"> voľné </p>
 		</div>
 	</div>
 	
@@ -468,6 +516,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="../js/bootstrap.min.js"></script>
+	<!-- maphilight plugin -->
+	<script type="text/javascript" src="http://davidlynch.org/projects/maphilight/jquery.maphilight.js"></script>
+	
 	<script src="../script.js"></script>
   </body>
 </html>
