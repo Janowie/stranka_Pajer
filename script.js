@@ -135,44 +135,54 @@ function showText(i) {
 
 
 
+// Zobrazenie podorysu poschodia
+function showFloor(n) {
+	var areas = getElementsByClassName("area");
+	for (var i = 0; i < areas.length; i++) {
+		$(areas[i]).removeClass("area" + (i+1));
+	}
+	$("#mapBytyFront").hide();
+	$("#floorImg").attr("src","../images/" + n + "_poschodie.jpg");
+}
 
 $(document).ready(function() {
 
-	$(".area1").mouseover(function() {
-		$(".area1").css("opacity","0.5");
-		$(".area1Tag").css("opacity","1");
-	});
-	$(".area1").mouseout(function() {
-		$(".area1").css("opacity","0");
-		$(".area1Tag").css("opacity","0");
-	});
 
-	$(".area2").mouseover(function() {
-		$(".area2").css("opacity","0.5");
-		$(".area2Tag").css("opacity","1");
-	});
-	$(".area2").mouseout(function() {
-		$(".area2").css("opacity","0");
-		$(".area2Tag").css("opacity","0");
-	});
+		/*$(".area1").mouseover(function() {
+			$(".area1").css("opacity","0.5");
+			$(".area1Tag").css("opacity","1");
+		});
+		$(".area1").mouseout(function() {
+			$(".area1").css("opacity","0");
+			$(".area1Tag").css("opacity","0");
+		});
 
-	$(".area3").mouseover(function() {
-		$(".area3").css("opacity","0.5");
-		$(".area3Tag").css("opacity","1");
-	});
-	$(".area3").mouseout(function() {
-		$(".area3").css("opacity","0");
-		$(".area3Tag").css("opacity","0");
-	});
+		$(".area2").mouseover(function() {
+			$(".area2").css("opacity","0.5");
+			$(".area2Tag").css("opacity","1");
+		});
+		$(".area2").mouseout(function() {
+			$(".area2").css("opacity","0");
+			$(".area2Tag").css("opacity","0");
+		});
 
-	$(".area4").mouseover(function() {
-		$(".area4").css("opacity","0.5");
-		$(".area4Tag").css("opacity","1");
-	});
-	$(".area4").mouseout(function() {
-		$(".area4").css("opacity","0");
-		$(".area4Tag").css("opacity","0");
-	});
+		$(".area3").mouseover(function() {
+			$(".area3").css("opacity","0.5");
+			$(".area3Tag").css("opacity","1");
+		});
+		$(".area3").mouseout(function() {
+			$(".area3").css("opacity","0");
+			$(".area3Tag").css("opacity","0");
+		});
+
+		$(".area4").mouseover(function() {
+			$(".area4").css("opacity","0.5");
+			$(".area4Tag").css("opacity","1");
+		});
+		$(".area4").mouseout(function() {
+			$(".area4").css("opacity","0");
+			$(".area4Tag").css("opacity","0");
+		});*/
 
 	// Switch
 
@@ -242,6 +252,8 @@ $(document).ready(function() {
 });
 
 
+
+// Generovanie stranky bytu
 function transform(n) {
 	var flatInfo = document.getElementById(n).querySelectorAll(".flat" + n);
 	var flatID = flatInfo[1].innerHTML;

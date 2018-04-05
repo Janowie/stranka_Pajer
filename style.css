@@ -450,7 +450,7 @@ footer {
 
 #Tag {
 	position: absolute;
-	background-color: rgba(241,196,15,0.9);
+	background-color: #f1c40f;
 	right: 17%;
 	width: 80px;
 	height: 80px;
@@ -467,6 +467,10 @@ footer {
 	background-color: #f1c40f;
 	top: 8%;
 	opacity: 0;
+}
+
+.area1:hover .area1Tag {
+	opacity: 0.5;
 }
 
 .area1Tag {

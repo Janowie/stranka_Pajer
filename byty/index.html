@@ -142,18 +142,19 @@
 
 	<div class="container bytyPoschodia" style="margin-top: 15px;">
 			
-			<div class="area1" id="mapByty"></div>
-			<div class="area2" id="mapByty"></div>
-			<div class="area3" id="mapByty"></div>
-			<div class="area4" id="mapByty"></div>
+			<div class="area1 area" id="mapByty" onclick="showFloor(1)"></div>
+			<div class="area2 area" id="mapByty" onclick="showFloor(2)"></div>
+			<div class="area3 area" id="mapByty" onclick="showFloor(3)"></div>
+			<div class="area4 area" id="mapByty" onclick="showFloor(4)"></div>
 
-			<div class="area1Tag" id="Tag"><p><br><b> 8 </b></p></div>
-			<div class="area2Tag" id="Tag"><p><br><b> 8 </b></p></div>
-			<div class="area3Tag" id="Tag"><p><br><b> 8 </b></p></div>
-			<div class="area4Tag" id="Tag"><p><br><b> 7 </b></p></div>
+			<div class="area1Tag" id="Tag" onclick="showFloor(1)"><p><br><b> 8 </b></p></div>
+			<div class="area2Tag" id="Tag" onclick="showFloor(2)"><p><br><b> 8 </b></p></div>
+			<div class="area3Tag" id="Tag" onclick="showFloor(3)"><p><br><b> 8 </b></p></div>
+			<div class="area4Tag" id="Tag" onclick="showFloor(4)"><p><br><b> 7 </b></p></div>
 		
 		<img src="../images/bytyFront.jpg" id="mapBytyFront" usemap="#map" alt="vizualizacia" style="width: 100%; border-radius: 3px;"/>
-		
+		<img id="floorImg" style="width: 100%; border-radius: 3px;"
+
 		<map name="map" id="map">
 			<area shape="rect" coords="0,0,300,300" data-maphilight="{'strokeColor':'0000ff','strokeWidth':5,'fillColor':'00ff00','fillOpacity':0.6}" alt="Sun" onclick="juhu()">
 		</map>
