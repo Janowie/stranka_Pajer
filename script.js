@@ -134,20 +134,6 @@ function showText(i) {
 
 
 
-
-// Zobrazenie podorysu poschodia
-function showFloor(n) {
-	var areas = getElementsByClassName("area");
-	for (var i = 0; i < areas.length; i++) {
-		$(areas[i]).removeClass("area" + (i+1));
-	}
-	$("#mapBytyFront").hide();
-	$("#floorImg").attr("src","../images/" + n + "_poschodie.jpg");
-}
-
-$(document).ready(function() {
-
-
 		/*$(".area1").mouseover(function() {
 			$(".area1").css("opacity","0.5");
 			$(".area1Tag").css("opacity","1");
@@ -185,6 +171,8 @@ $(document).ready(function() {
 		});*/
 
 	// Switch
+
+	$(document).ready(function() {
 
 	var clicked1 = true;
 	var clicked2 = true;
@@ -252,15 +240,34 @@ $(document).ready(function() {
 });
 
 
+// Pouzie maphilight na vsetky mapy
+$('img[usemap]').maphilight();
+
+// Zobrazenie podorysu poschodia
+function showFloor(n) {
+	$(".bytyPoschodia").hide();
+	$("#showFloorBack").show();
+	$("#floorImg").show();
+	$("#floorImg").attr("src","../images/" + n + "_poschodie.jpg");
+	$(".bytyPoschodia").attr("css","margin-top: -100px;");
+}
+
+function showFloorBack() {
+	$(".bytyPoschodia").show();
+	$("#showFloorBack").hide();
+	$("#floorImg").hide();
+}
+
 
 // Generovanie stranky bytu
 function transform(n) {
 	var flatInfo = document.getElementById(n).querySelectorAll(".flat" + n);
 	var flatID = flatInfo[1].innerHTML;
-
+	
 	// Show / hide
-	//$("#bytyBody").hide();
-	//$(".detailBox").show();
+	$("#bytyBody").hide();
+	$(".detailBox").show();
+	$("#additionalException").show();
 
 	// Flat information
 	document.getElementById("thisFlatHeadline").innerHTML = "BYT <b>" + flatID + "</b>";
@@ -271,14 +278,25 @@ function transform(n) {
 	document.getElementById("thissizeLoggia").innerHTML= "<b>Plocha loggia:</b> " + flatInfo[4].innerHTML;
 	document.getElementById("thistotalSize").innerHTML= "<b>Celková plocha:</b> " + flatInfo[5].innerHTML;
 	document.getElementById("thisprice").innerHTML= "<b>Cena s DPH:</b> " + flatInfo[6].innerHTML;
-	
+
 	// Flat image
 	$("#thisImg").attr("src", "../images/byt" + flatID + ".png"); 
 	
+
+	// kopka add + exception
+	$("#thisImgKopka").attr("src", "../images/byt" + flatID[1] + flatID[2] + "Kopka.png");
+	if ((flatID[2] == '4') || ((flatID[0] == 1) && (flatID[2] == 7)))
+	{
+		$("#additionalException").hide();
+	}
+
 	// Scroll to top
 	$('html, body').animate({
         window:scrollTo(0,0)
 	}, 1000);
+
+	// Add margin-bottom
+	$(".detailBox").css("margin-bottom","300px");
 }
 
 function backByty() {
@@ -287,6 +305,11 @@ function backByty() {
 	$('html, body').animate({
         scrollTop: $(".scrollHere").offset().top
     }, 1000);
+}
+
+function showKopka() {
+	$("#thisImg").toggle();
+	$("#thisImgKopka").toggle();
 }
 
 

@@ -439,6 +439,24 @@ footer {
 	top: 30px;
 }
 
+.additional h3 {
+	padding-top: 30px;
+}
+
+.additional .col-lg-3:first-of-type {
+	border-left: 1px dotted black;
+	cursor: pointer;
+}
+
+.additional .col-lg-3 {
+	border-right: 1px dotted black;
+	height: 150px;
+}
+
+.additional .col-lg-3:hover {
+	background-color: #f1c40f;
+}
+
 #mapByty {
 	position: absolute;
 	left: 22%;
@@ -446,6 +464,10 @@ footer {
 	height: 10%;
 	cursor: pointer;
 	border-radius: 5px; 
+}
+
+#showFloorBack {
+	display: none;
 }
 
 #Tag {
@@ -469,8 +491,8 @@ footer {
 	opacity: 0;
 }
 
-.area1:hover .area1Tag {
-	opacity: 0.5;
+.area1:hover, .area2:hover, .area3:hover, .area4:hover {
+	opacity: 0.7;
 }
 
 .area1Tag {
@@ -480,16 +502,16 @@ footer {
 
 .area2 {
 	background-color: #f1c40f;
-	top: 18.5%;
+	top: 17.5%;
 	opacity: 0;
 }
 .area2Tag {
-	top: 18.5%;
+	top: 17.5%;
 	opacity: 0;
 }
 .area3 {
 	background-color: #f1c40f;
-	top: 28%;
+	top: 27.5%;
 	opacity: 0;
 }
 .area3Tag {
@@ -498,7 +520,7 @@ footer {
 }
 .area4 {
 	background-color: #f1c40f;
-	top: 38%;
+	top: 37%;
 	opacity: 0;
 }
 .area4Tag {
@@ -648,9 +670,6 @@ table p {
 
 }
 
-#bytyBody {
-}
-
 .thisFlatHeadlineBc, .thisParkovanieHeadline {
 	width: 300px;
 	margin: -20px auto 0px auto;
@@ -693,7 +712,15 @@ line-height: 75px;
 }
 
 .detailBox {
-	/*display: none;*/
+display: none;
+}
+
+.detailReservation {
+	margin-top: 75px;
+}
+
+.detailReservation img {
+	width: 80px; margin: 0px auto 30px auto;
 }
 
 
