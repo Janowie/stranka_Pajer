@@ -466,6 +466,10 @@ footer {
 	border-radius: 5px; 
 }
 
+.thisBytyPoschodia {
+	display: none;
+}
+
 #showFloorBack {
 	display: none;
 }

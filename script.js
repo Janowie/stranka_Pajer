@@ -247,17 +247,18 @@ $('img[usemap]').maphilight();
 function showFloor(n) {
 	$(".bytyPoschodia").hide();
 	$("#showFloorBack").show();
-	$("#floorImg").show();
-	$("#floorImg").attr("src","../images/" + n + "_poschodie.jpg");
+	$(".thisBytyPoschodia").show();
+	//$("#floorImg").attr("src","../images/" + n + "_poschodie.jpg");
+	//$("#floorImg").attr("usemap","#mapFlats" + n);
 	$(".bytyPoschodia").attr("css","margin-top: -100px;");
 }
 
 function showFloorBack() {
 	$(".bytyPoschodia").show();
-	$("#showFloorBack").hide();
 	$("#floorImg").hide();
+	$("#showFloorBack").hide();
+	$("#mapFlats").hide();
 }
-
 
 // Generovanie stranky bytu
 function transform(n) {
