@@ -466,8 +466,42 @@ footer {
 	border-radius: 5px; 
 }
 
-.thisBytyPoschodia {
+/* SVG MAP */
+#poschodie1, #poschodie2, #poschodie3, #poschodie4 {
 	display: none;
+}
+
+svg {
+	width: 100%;
+}
+
+#poschodie1D1, #poschodie1D2, #poschodie1J3, 
+#poschodie1J4, #poschodie1J5, #poschodie1J6, 
+#poschodie1J7, #poschodie2D1, #poschodie2D2, 
+#poschodie2J3, #poschodie2J4, #poschodie2J5, 
+#poschodie2J6, #poschodie2J7, #poschodie2J8,
+#poschodie3D1, #poschodie3D2, #poschodie3J3, 
+#poschodie3J4, #poschodie3J5, #poschodie3J6, 
+#poschodie3D7, #poschodie4D1, #poschodie4D2, 
+#poschodie4J3, #poschodie4J4, #poschodie4J5, 
+#poschodie4J6, #poschodie4D7 
+{
+	fill: rgba(0, 0, 0, 0);
+	cursor: pointer;
+}
+
+#poschodie1D1:hover, #poschodie1D2:hover, #poschodie1J3:hover, 
+#poschodie1J4:hover, #poschodie1J5:hover, #poschodie1J6:hover, 
+#poschodie1J7:hover, #poschodie2D1:hover, #poschodie2D2:hover, 
+#poschodie2J3:hover, #poschodie2J4:hover, #poschodie2J5:hover, 
+#poschodie2J6:hover, #poschodie2J7:hover, #poschodie2J8:hover,
+#poschodie3D1:hover, #poschodie3D2:hover, #poschodie3J3:hover, 
+#poschodie3J4:hover, #poschodie3J5:hover, #poschodie3J6:hover, 
+#poschodie3D7:hover, #poschodie4D1:hover, #poschodie4D2:hover, 
+#poschodie4J3:hover, #poschodie4J4:hover, #poschodie4J5:hover, 
+#poschodie4J6:hover, #poschodie4D7:hover  {
+	fill: rgba(42, 127, 6, 0.5);
+	cursor: pointer;
 }
 
 #showFloorBack {

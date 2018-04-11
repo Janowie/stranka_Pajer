@@ -239,26 +239,47 @@ function showText(i) {
 	});
 });
 
-
-// Pouzie maphilight na vsetky mapy
 $('img[usemap]').maphilight();
+
 
 // Zobrazenie podorysu poschodia
 function showFloor(n) {
 	$(".bytyPoschodia").hide();
 	$("#showFloorBack").show();
-	$(".thisBytyPoschodia").show();
-	//$("#floorImg").attr("src","../images/" + n + "_poschodie.jpg");
-	//$("#floorImg").attr("usemap","#mapFlats" + n);
-	$(".bytyPoschodia").attr("css","margin-top: -100px;");
+	$(".poschodie").show();
+	$("#poschodie" + n).show();
+	$("#showFloorBack").attr("onclick","showFloorBack(" + n + ")");
 }
 
-function showFloorBack() {
+function showFloorBack(n) {
 	$(".bytyPoschodia").show();
-	$("#floorImg").hide();
 	$("#showFloorBack").hide();
-	$("#mapFlats").hide();
+	$("#poschodie" + n).hide();
 }
+
+$(document).ready(function(){
+	$("#poschodie1D1").click(function(){
+		transform(1);
+	});
+	$("#poschodie1D2").click(function(){
+		transform(2);
+	});
+	$("#poschodie1J3").click(function(){
+		transform(3);
+	});
+	$("#poschodie1J4").click(function(){
+		transform(4);
+	});
+	$("#poschodie1J5").click(function(){
+		transform(5);
+	});
+	$("#poschodie1J6").click(function(){
+		transform(6);
+	});
+	$("#poschodie1J7").click(function(){
+		transform(7);
+	});
+});
 
 // Generovanie stranky bytu
 function transform(n) {
@@ -272,7 +293,7 @@ function transform(n) {
 
 	// Flat information
 	document.getElementById("thisFlatHeadline").innerHTML = "BYT <b>" + flatID + "</b>";
-	document.getElementById("thisfloor").innerHTML= "<b>Podlažie:</b> " + flatInfo[0].innerHTML;
+	document.getElementById("thisfloor").innerHTML= "<b>Podlažie:</b> " + flatID[0] + ".";
 	document.getElementById("thisroomID").innerHTML= "<b>Kód bytu:</b> " + flatInfo[1].innerHTML;
 	document.getElementById("thisnumberOfRooms").innerHTML= "<b>Počet izieb:</b> " + flatInfo[2].innerHTML;
 	document.getElementById("thissize").innerHTML= "<b>Plocha:</b> " + flatInfo[3].innerHTML;
@@ -281,11 +302,11 @@ function transform(n) {
 	document.getElementById("thisprice").innerHTML= "<b>Cena s DPH:</b> " + flatInfo[6].innerHTML;
 
 	// Flat image
-	$("#thisImg").attr("src", "../images/byt" + flatID + ".png"); 
+	$("#thisImg").attr("src", "../images/podorysy/byt" + flatID + ".png"); 
 	
 
 	// kopka add + exception
-	$("#thisImgKopka").attr("src", "../images/byt" + flatID[1] + flatID[2] + "Kopka.png");
+	$("#thisImgKopka").attr("src", "../images/podorysy/byt" + flatID[1] + flatID[2] + "Kopka.png");
 	if ((flatID[2] == '4') || ((flatID[0] == 1) && (flatID[2] == 7)))
 	{
 		$("#additionalException").hide();
