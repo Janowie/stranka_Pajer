@@ -453,7 +453,7 @@ footer {
 	height: 150px;
 }
 
-.additional .col-lg-3:hover {
+.additional .col-lg-3:first-child:hover {
 	background-color: #f1c40f;
 }
 
@@ -473,6 +473,12 @@ footer {
 
 svg {
 	width: 100%;
+}
+
+#P1,#P2,#P3,#P4,#P5,#P6,#P7,#P8,#P9,#P10,
+#P11,#P12,#P13,#P14,#P15,#P16,#P17,#P18,#P19,
+#P20,#P21,#P22,#P23,#P24,#P25,#P26 {
+	fill: rgba(42, 127, 6, 0.5);
 }
 
 #poschodie1D1, #poschodie1D2, #poschodie1J3, 
@@ -503,6 +509,25 @@ svg {
 	fill: rgba(42, 127, 6, 0.5);
 	cursor: pointer;
 }
+
+
+
+#domKostra, #pos1, #pos2, #pos3, #pos4, 
+#ukazkaByt1, #ukazkaByt2, #ukazkaByt3, #ukazkaByt4,
+#ukazkaByt5, #ukazkaByt6, #ukazkaByt7, #ukazkaByt8,
+#ukazkaByt9
+{
+	fill:rgb(24, 26, 31);
+	stroke:#FFFFFF;
+	stroke-miterlimit:10;
+}
+
+.thisOne {
+	fill: #f1c40f !important;
+	stroke:#FFFFFF;
+	stroke-miterlimit:10;
+}
+
 
 #showFloorBack {
 	display: none;
@@ -579,6 +604,26 @@ svg {
 	cursor: pointer;
 	margin: auto;
 }
+
+/*  Pagination  */
+
+
+.pagination {
+    position: absolute;
+    left: 0;
+}
+
+.pagination:nth-child(2) {
+	left: 30px; 
+}
+.pagination:nth-child(3) {
+	left: 60px; 
+}
+.pagination:nth-child(4) {
+	left: 90px; 
+}
+
+
 
 /* SWITCH */
 .switch {
@@ -720,7 +765,7 @@ table p {
 }
 
 .thisFlat {
-	width: 80%;
+	/*width: 80%;*/
 	list-style-type: none;
 	padding: 5px 25px 0px 25px;
 	margin: auto;
@@ -750,7 +795,7 @@ line-height: 75px;
 }
 
 .detailBox {
-display: none;
+ display: none;
 }
 
 .detailReservation {
@@ -769,6 +814,10 @@ display: none;
 
 .gallery .row img {
 	width: 100%;
+}
+
+.hidePart {
+	display: none;
 }
 
 #rozmery {

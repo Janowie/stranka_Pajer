@@ -239,7 +239,7 @@ function showText(i) {
 	});
 });
 
-$('img[usemap]').maphilight();
+
 
 
 // Zobrazenie podorysu poschodia
@@ -257,6 +257,7 @@ function showFloorBack(n) {
 	$("#poschodie" + n).hide();
 }
 
+//    SVG map floor click
 $(document).ready(function(){
 	$("#poschodie1D1").click(function(){
 		transform(1);
@@ -279,24 +280,93 @@ $(document).ready(function(){
 	$("#poschodie1J7").click(function(){
 		transform(7);
 	});
+	$("#poschodie2D1").click(function(){
+		transform(8);
+	});
+	$("#poschodie2D2").click(function(){
+		transform(9);
+	});
+	$("#poschodie2J3").click(function(){
+		transform(10);
+	});
+	$("#poschodie2J4").click(function(){
+		transform(11);
+	});
+	$("#poschodie2J5").click(function(){
+		transform(12);
+	});
+	$("#poschodie2J6").click(function(){
+		transform(13);
+	});
+	$("#poschodie2J7").click(function(){
+		transform(14);
+	});
+	$("#poschodie2J8").click(function(){
+		transform(15);
+	});
+	$("#poschodie3D1").click(function(){
+		transform(16);
+	});
+	$("#poschodie3D2").click(function(){
+		transform(17);
+	});
+	$("#poschodie3J3").click(function(){
+		transform(18);
+	});
+	$("#poschodie3J4").click(function(){
+		transform(19);
+	});
+	$("#poschodie3J5").click(function(){
+		transform(20);
+	});
+	$("#poschodie3J6").click(function(){
+		transform(21);
+	});
+	$("#poschodie3D7").click(function(){
+		transform(22);
+	});
+	$("#poschodie4D1").click(function(){
+		transform(23);
+	});
+	$("#poschodie4D2").click(function(){
+		transform(24);
+	});
+	$("#poschodie4J3").click(function(){
+		transform(25);
+	});
+	$("#poschodie4J4").click(function(){
+		transform(26);
+	});
+	$("#poschodie4J5").click(function(){
+		transform(27);
+	});
+	$("#poschodie4J6").click(function(){
+		transform(28);
+	});
+	$("#poschodie4D7").click(function(){
+		transform(29);
+	});
 });
 
 // Generovanie stranky bytu
 function transform(n) {
 	var flatInfo = document.getElementById(n).querySelectorAll(".flat" + n);
 	var flatID = flatInfo[1].innerHTML;
+	var flatFloor = parseInt(flatID[0]);
 	
 	// Show / hide
 	$("#bytyBody").hide();
 	$(".detailBox").show();
 	$("#additionalException").show();
 
+	
+
 	// Flat information
 	document.getElementById("thisFlatHeadline").innerHTML = "BYT <b>" + flatID + "</b>";
 	document.getElementById("thisfloor").innerHTML= "<b>Podlažie:</b> " + flatID[0] + ".";
 	document.getElementById("thisroomID").innerHTML= "<b>Kód bytu:</b> " + flatInfo[1].innerHTML;
 	document.getElementById("thisnumberOfRooms").innerHTML= "<b>Počet izieb:</b> " + flatInfo[2].innerHTML;
-	document.getElementById("thissize").innerHTML= "<b>Plocha:</b> " + flatInfo[3].innerHTML;
+	document.getElementById("thissize").innerHTML= "<b>Plocha loggie:</b> " + flatInfo[3].innerHTML;
 	document.getElementById("thissizeLoggia").innerHTML= "<b>Plocha loggia:</b> " + flatInfo[4].innerHTML;
 	document.getElementById("thistotalSize").innerHTML= "<b>Celková plocha:</b> " + flatInfo[5].innerHTML;
 	document.getElementById("thisprice").innerHTML= "<b>Cena s DPH:</b> " + flatInfo[6].innerHTML;
@@ -304,10 +374,50 @@ function transform(n) {
 	// Flat image
 	$("#thisImg").attr("src", "../images/podorysy/byt" + flatID + ".png"); 
 	
+	// Set position
+	for (var i = 1; i < 5; i++) {
+		$("#pos" + i).removeAttr("class","thisOne");
+	}
+	$("#pos" + flatFloor).attr("class","thisOne");
+
+	for (var i = 1; i < 10; i++) {
+		$("#ukazkaByt" + i).removeAttr("class","thisOne");
+	}
+	if ((n == 1) || (n == 8) || (n == 16) || (n == 23)) {
+		$("#ukazkaByt1").attr("class","thisOne");
+	}
+	else if ((n == 2) || (n == 9) || (n == 17) || (n == 24)) {
+		$("#ukazkaByt2").attr("class","thisOne");
+	}
+	else if ((n == 3) || (n == 10) || (n == 18) || (n == 25)) {
+		$("#ukazkaByt3").attr("class","thisOne");
+	}
+	else if ((n == 4) || (n == 11) || (n == 19) || (n == 26)) {
+		$("#ukazkaByt4").attr("class","thisOne");
+	}
+	else if ((n == 5) || (n == 12) || (n == 20) || (n == 27)) {
+		$("#ukazkaByt5").attr("class","thisOne");
+	}
+	else if ((n == 6) || (n == 13) || (n == 21) || (n == 28)) {
+		$("#ukazkaByt6").attr("class","thisOne");
+	}
+	else if ((n == 7) || (n == 14) || (n == 24)) {
+		$("#ukazkaByt7").attr("class","thisOne");
+	}
+	else if (n == 15) {
+		$("#ukazkaByt8").attr("class","thisOne");
+	}
+	else if ((n == 22) || (n == 29)) {
+		$("#ukazkaByt7").attr("class","thisOne");
+		$("#ukazkaByt8").attr("class","thisOne");
+	}
+
+
+
 
 	// kopka add + exception
 	$("#thisImgKopka").attr("src", "../images/podorysy/byt" + flatID[1] + flatID[2] + "Kopka.png");
-	if ((flatID[2] == '4') || ((flatID[0] == 1) && (flatID[2] == 7)))
+	if ((flatID[2] == '4') || ((flatID[0] == 1) && (flatID[2] == 7)) || (flatID[2] == '8'))
 	{
 		$("#additionalException").hide();
 	}
@@ -326,20 +436,12 @@ function backByty() {
 	$(".detailBox").hide();
 	$('html, body').animate({
         scrollTop: $(".scrollHere").offset().top
-    }, 1000);
+	}, 1000);
 }
 
 function showKopka() {
 	$("#thisImg").toggle();
 	$("#thisImgKopka").toggle();
-}
-
-
-//$('#mapBytyFront').maphilight();
-
-
-function juhu() {
-	alert("JUHUU");
 }
 
 
