@@ -445,8 +445,28 @@ function showKopka() {
 }
 
 
+$("#videoFront").click(function(){
+	this.pause();
+});
 
 //          BYTY - DVOJIZBOVY      //
+
+//function controlVideo() {
+
+$(".videoControl").click(function(){
+	alert("HURAA");
+	var vid = document.getElementById("videoFront");
+    if (vid.paused) 
+		play(); 
+    else 
+		pause(); 
+});
+	
+//}
+	
+
+
+
 
 // PRVY ROW FUNKCIE
 
