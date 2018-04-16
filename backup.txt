@@ -1,85 +1,46 @@
-var slideIndex1 = 1;
-		var slideIndex2 = 1;
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+		  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		  <li data-target="#myCarousel" data-slide-to="1"></li>
+		  <li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
 
-		showSlides1(slideIndex1);
-		showSlides2(slideIndex2);
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="images/vizualizaciaFront1.png" alt="vizualizacia1" style="width:100%;">
+				<div class="carousel-caption">
+					<p> Miesto pre rodinu </p>
+				</div>
+			</div>
 
-		function changeSlide1(n) {
-			showSlides1(slideIndex1 += n);
-		}
+			<div class="item">
+				<img src="images/vizualizaciaFront2.jpg" alt="vizualizacia2" style="width:100%;">
+				<div class="carousel-caption">
+					<h1> Vychutnajte si vlastný park </h1>
+					<p> Byty Jurajov dvor </p>
+					<img src="images/logoKruh.png" class="center" style="width: 70px; padding-bottom: 8px;" alt="logo" />
+				</div>
+			</div>
+			
+			<div class="item">
+				<img src="images/vizualizaciaFront3.jpg" alt="vizualizacia3" style="width:100%;">
+				<div class="carousel-caption">
+					<h1> Oddýchnite si na priestranných loggiách </h1>
+					<p> Byty Jurajov dvor </p>
+					<img src="images/logoKruh.png" class="center" style="width: 70px; padding-bottom: 8px;" alt="logo" />
+				</div>
+			</div>
+		</div>
 
-		function changeSlide2(n) {
-			showSlides2(slideIndex2 += n);
-		}
-
-		function showSlides1(n) {
-			var i;
-			var slides = document.getElementsByClassName("slides1");
-			var buttons = document.getElementsByClassName("buttons1");
-
-			if (n > slides.length) {
-				slideIndex1 = 1;
-			}
-			if (n < slides.length) {
-				slideIndex1 = slides.length;
-			}
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-				buttons[i].style.display = "none"; 
-				$(".slides1Rozmery").hide();
-			}
-			slides[slideIndex1-1].style.display = "block";
-			buttons[slideIndex1-1].style.display = "block";
-			document.getElementById("demo").innerHTML = "Som na: " + slideIndex1-1;
-		}
-
-
-		function showSlides2(n) {
-			var i;
-			var slides = document.getElementsByClassName("slides2");
-
-			if (n > slides.length) {
-				slideIndex2 = 1;
-			}
-			if (n < slides.length) {
-				slideIndex2 = slides.length;
-			}
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none"; 
-			}
-			slides[slideIndex2-1].style.display = "block";
-		}
-
-
-
-		function showRozmery(n) {
-			var rozmery = document.getElementsByClassName("slides1Rozmery");
-			if (n == 1) {
-				$(rozmery[0]).toggle();
-			}
-			if (n == 2) {
-				$(rozmery[1]).toggle();
-			}
-		}
-
-
-
-
-/*	$("#scrollFromHere").scroll(function() {
-			$('html, body').animate({
-				scrollTop: $("#scrollHere").offset().top
-			}, 1000);
-		});
-		$("#scrollHere").scroll(function() {
-			$('html, body').animate({
-				scrollTop: $("#scrollFromHere").offset().top
-			}, 1000);
-		});
-	
-
-		$(document).ready(function(){
-			$("button").click(function(){
-				$(".slides1Rozmery1").toggle();
-			});
-		});
-*/
+		<!-- Left and right controls -->
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		  <span class="glyphicon glyphicon-chevron-left"></span>
+		  <span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next">
+		  <span class="glyphicon glyphicon-chevron-right"></span>
+		  <span class="sr-only">Next</span>
+		</a>
+	  </div>

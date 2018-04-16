@@ -366,7 +366,7 @@ function transform(n) {
 	document.getElementById("thisfloor").innerHTML= "<b>Podlažie:</b> " + flatID[0] + ".";
 	document.getElementById("thisroomID").innerHTML= "<b>Kód bytu:</b> " + flatInfo[1].innerHTML;
 	document.getElementById("thisnumberOfRooms").innerHTML= "<b>Počet izieb:</b> " + flatInfo[2].innerHTML;
-	document.getElementById("thissize").innerHTML= "<b>Plocha loggie:</b> " + flatInfo[3].innerHTML;
+	document.getElementById("thissize").innerHTML= "<b>Plocha bytu:</b> " + flatInfo[3].innerHTML;
 	document.getElementById("thissizeLoggia").innerHTML= "<b>Plocha loggia:</b> " + flatInfo[4].innerHTML;
 	document.getElementById("thistotalSize").innerHTML= "<b>Celková plocha:</b> " + flatInfo[5].innerHTML;
 	document.getElementById("thisprice").innerHTML= "<b>Cena s DPH:</b> " + flatInfo[6].innerHTML;
@@ -445,8 +445,28 @@ function showKopka() {
 }
 
 
+$("#videoFront").click(function(){
+	this.pause();
+});
 
 //          BYTY - DVOJIZBOVY      //
+
+//function controlVideo() {
+
+$(".videoControl").click(function(){
+	alert("HURAA");
+	var vid = document.getElementById("videoFront");
+    if (vid.paused) 
+		play(); 
+    else 
+		pause(); 
+});
+	
+//}
+	
+
+
+
 
 // PRVY ROW FUNKCIE
 
