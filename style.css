@@ -64,6 +64,8 @@ h3 {
 nav {
 	border-bottom: 8px solid #f1c40f;
 	font-family: 'Maven Pro', sans-serif;
+	z-index: 5000000;
+	background-color: white;
 }
 
 nav .container {
@@ -188,22 +190,41 @@ footer {
 
 /* FRONT PAGE */
 
+/* VIDEOO FRONT */
+#videoFront {
+	position: absolute;
+	top: -20%;
+	z-index: -50000000;
+	width: 100%;
+	height: auto;
+}
+
+#videoContainer {
+	height: auto;
+}
+
+#frontVideoButton {
+	width: 200px;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#frontVideoButton:hover {
+    background: #ddd;
+    color: black;
+}
 
 .frontImg {
 	width: 100%;
 }
 
-
-.frontHeadline {
-	position: absolute;
-	top: 200px;
-	left: 4%;
-	text-align: center;
-	color: white;
-	font-size: 70px;
-	font-weight: bold;
-	font-family: 'Maven Pro', sans-serif;
-}
 
 .first, .second, .third {
 	display: none;
@@ -245,6 +266,11 @@ footer {
 }
 
 /*    O PROJEKTE     */
+
+.oProjekteNadpis {
+	width: 40%;
+	margin: 30px auto 40px auto;
+}
 
 .mapOprojekte {
 	height: 700px !important;

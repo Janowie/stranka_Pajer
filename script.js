@@ -1,3 +1,23 @@
+//		FRONT		//
+
+var video = document.getElementById("videoFront");
+var button = document.getElementById("frontVideoButton");
+
+$(document).ready(function(){
+	$("#videoContainer").height(($("#videoFront").height() - ($(window).height() / 100*20)));
+});
+
+function playPause() {
+  if (video.paused) {
+	video.play();
+	button.innerHTML = "ZASTAVIŤ";
+  } 
+  else {
+	video.pause();
+	button.innerHTML = "SPUSTIŤ";
+  }
+}
+
 //        KONTAKTY                //
 
 //  MAPA
@@ -132,43 +152,6 @@ function showText(i) {
 //        BYTY A PARKOVANIE        //
 
 
-
-
-		/*$(".area1").mouseover(function() {
-			$(".area1").css("opacity","0.5");
-			$(".area1Tag").css("opacity","1");
-		});
-		$(".area1").mouseout(function() {
-			$(".area1").css("opacity","0");
-			$(".area1Tag").css("opacity","0");
-		});
-
-		$(".area2").mouseover(function() {
-			$(".area2").css("opacity","0.5");
-			$(".area2Tag").css("opacity","1");
-		});
-		$(".area2").mouseout(function() {
-			$(".area2").css("opacity","0");
-			$(".area2Tag").css("opacity","0");
-		});
-
-		$(".area3").mouseover(function() {
-			$(".area3").css("opacity","0.5");
-			$(".area3Tag").css("opacity","1");
-		});
-		$(".area3").mouseout(function() {
-			$(".area3").css("opacity","0");
-			$(".area3Tag").css("opacity","0");
-		});
-
-		$(".area4").mouseover(function() {
-			$(".area4").css("opacity","0.5");
-			$(".area4Tag").css("opacity","1");
-		});
-		$(".area4").mouseout(function() {
-			$(".area4").css("opacity","0");
-			$(".area4Tag").css("opacity","0");
-		});*/
 
 	// Switch
 
@@ -366,7 +349,7 @@ function transform(n) {
 	document.getElementById("thisfloor").innerHTML= "<b>Podlažie:</b> " + flatID[0] + ".";
 	document.getElementById("thisroomID").innerHTML= "<b>Kód bytu:</b> " + flatInfo[1].innerHTML;
 	document.getElementById("thisnumberOfRooms").innerHTML= "<b>Počet izieb:</b> " + flatInfo[2].innerHTML;
-	document.getElementById("thissize").innerHTML= "<b>Plocha bytu:</b> " + flatInfo[3].innerHTML;
+	document.getElementById("thissize").innerHTML= "<b>Plocha loggie:</b> " + flatInfo[3].innerHTML;
 	document.getElementById("thissizeLoggia").innerHTML= "<b>Plocha loggia:</b> " + flatInfo[4].innerHTML;
 	document.getElementById("thistotalSize").innerHTML= "<b>Celková plocha:</b> " + flatInfo[5].innerHTML;
 	document.getElementById("thisprice").innerHTML= "<b>Cena s DPH:</b> " + flatInfo[6].innerHTML;
@@ -451,18 +434,6 @@ $("#videoFront").click(function(){
 
 //          BYTY - DVOJIZBOVY      //
 
-//function controlVideo() {
-
-$(".videoControl").click(function(){
-	alert("HURAA");
-	var vid = document.getElementById("videoFront");
-    if (vid.paused) 
-		play(); 
-    else 
-		pause(); 
-});
-	
-//}
 	
 
 
