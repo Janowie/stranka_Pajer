@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> RJD </title>
+    <title> Byty Jurajov dvor </title>
 	<link rel="icon" type="image/png" sizes="16x16" href="../images/logo_icon.png">
     
 	<!-- Bootstrap -->
@@ -22,7 +22,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
 	
 	<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkcPwb6rpDAINfbgSmTWBdzCQVkwJCwCA&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkcPwb6rpDAINfbgSmTWBdzCQVkwJCwCA&callback=initMapOPR">
     </script>
   </head>
   <body>
@@ -63,7 +63,7 @@
 			altánok na grilovanie a detské ihrisko. Robíme to v súlade s 
 			našou víziou poskytnúť pocit domova v rušnej Bratislave.
 			Aby ste sa o svoje deti či súkromie nemuseli báť, dvor s parkom
-			pred bytovým domom je ohradený plotom pre Váš konfort.
+			pred bytovým domom je ohradený plotom pre Váš komfort.
 			<br><br>
 		</p>
 	</div>
@@ -130,42 +130,53 @@
 <!-- LOKALITA -->
 
 <img src="../images/lokalitaVrch.png" alt="carSymbol" style="width: 40%; margin-left: 58%;" class="img-responsive"/>
-	<p class="text-center" style="width: 70%; margin: auto; padding-bottom: 50px;">
-			Jurajov dvor leží na dopravnom uzle, vďaka ktorému sa bez
-			menších problémov dostanete do meste už za 10 minút a to autom,
-			autobusom alebo električkou.
-	</p>
+
+	<div class="container" style="width: 60%; max-width: 650px; margin-bottom: 50px;">	
+		<p>
+			<br>
+			Trnávka je pre svoju občiansku vybavenosť, dostupnosť a pokojné prostredie
+			jedna z najvyhľadávanejších mestských častí Bratislavy. Či si radšej vyjdete
+			do Starého mesta, k Dunaji alebo do prírody, všade sa dostanete v priebehu pár minút,
+			keďže Jurajov dvor leží na dopravnom uzle. 
+			<br><br>
+			V blízkosti bytov sa nachádza viac ako 8 reštaurácií a kaviarní, 3 materské
+			škôlky alebo základné školy.
+			<br><br>
+		</p>
+		<h2 class="text-center"> Pozrite sa, čo všetko je od Vášho budúceho bytu vzialené len 5 až 10 minút.</h2>			
+		
+	</div>
 
 	<div class="row">
 		<div class="col-lg-8" style="margin: 0px;">
-			<div id="map" class="mapOprojekte"></div>
+			<div id="mapOPR" class="mapOprojekte"></div>
 		</div>
 		<div class="col-lg-4" style="margin-left: -10px;">
 			
 			<table class="table" style="margin-top:50px; text-align:center;">
-				<tr class="firstTr">
+				<tr class="firstTr" onclick="toggleClick('Shop')">
 					<td><p style="padding-top: 20px;">Obchod</p></td>
-					<td><img src="../images/map_marker_shop.png" alt="symbolShop" class="customMapMarker"></td>
+					<td><img src="../images/markers/newMarkerShop.png" alt="symbolShop" class="customMapMarker"></td>
 				</tr>
-				<tr class="secondTr">
-					<td><p style="padding-top: 20px;">Lekárenské zariadenie</p></td>
-					<td><img src="../images/map_marker_doctor.png" alt="symbolShop" class="customMapMarker"></td>
-				</tr>
-				<tr class="thirdTr">
-					<td><p style="padding-top: 20px;">Banka</p></td>
-					<td><img src="../images/map_marker_bank.png" alt="symbolShop" class="customMapMarker"></td>
-				</tr>
-				<!--<tr>
-					<td>Škola</td>
-					<td><img src="../images/map_marker" alt="symbolShop"></td>
-				</tr>-->
-				<tr class="fourthTr">
+				<tr class="fourthTr" onclick="toggleClick('Food')">
 					<td><p style="padding-top: 20px;">Reštaurácia</p></td>
-					<td><img src="../images/map_marker_restaurant.png" alt="symbolRestauracia" class="customMapMarker"></td>
+					<td><img src="../images/markers/newMarkerFood.png" alt="symbolRestauracia" class="customMapMarker"></td>
 				</tr>
-				<tr class="fiftTr">
+				<tr class="thirdTr" onclick="toggleClick('School')">
+					<td><p style="padding-top: 20px;">Škola / škôlka</p></td>
+					<td><img src="../images/markers/newMarkerSchool.png" alt="symbolShop" class="customMapMarker"></td>
+				</tr>
+				<tr class="sixthTr" onclick="toggleClick('Sport')">
 					<td><p style="padding-top: 20px;">Šport</p></td>
-					<td><img src="../images/map_marker_sport.png" alt="symbolOddych" class="customMapMarker"></td>
+					<td><img src="../images/markers/newMarkerSport.png" alt="symbolSport" class="customMapMarker"></td>
+				</tr>
+				<tr class="secondTr" onclick="toggleClick('Doctor')">
+					<td><p style="padding-top: 20px;">Lekárenské zariadenie</p></td>
+					<td><img src="../images/markers/newMarkerDoctor.png" alt="symbolShop" class="customMapMarker"></td>
+				</tr>
+				<tr class="fiftTr" onclick="toggleClick('ATM')">
+					<td><p style="padding-top: 20px;">Banka / bankomat</p></td>
+					<td><img src="../images/markers/newMarkerATM.png" alt="symbolOddych" class="customMapMarker"></td>
 				</tr>
 			</table>
 		</div>

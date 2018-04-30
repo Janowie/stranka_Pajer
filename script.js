@@ -1,26 +1,13 @@
 //		FRONT		//
 
-var video = document.getElementById("videoFront");
-var button = document.getElementById("frontVideoButton");
-
 $(document).ready(function(){
-	$("#videoContainer").height(($("#videoFront").height() - ($(window).height() / 100*20)));
+	$(".navButton").click(function(){
+		$("#navCollapse").show();
+	});
 });
-
-function playPause() {
-  if (video.paused) {
-	video.play();
-	button.innerHTML = "ZASTAVIŤ";
-  } 
-  else {
-	video.pause();
-	button.innerHTML = "SPUSTIŤ";
-  }
-}
 
 //        KONTAKTY                //
 
-//  MAPA
 function initMap() {
 	var uluru = {lat: 48.184910, lng: 17.165696};
 	var map = new google.maps.Map(document.getElementById('map'), {
@@ -117,6 +104,89 @@ function initMap() {
 	  },
 	  map: map
 	});
+
+	var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+        var icons = {
+          parking: {
+            icon: iconBase + 'parking_lot_maps.png'
+          },
+          library: {
+            icon: iconBase + 'library_maps.png'
+          },
+          info: {
+            icon: iconBase + 'info-i_maps.png'
+          }
+        };
+
+        var features = [
+          {
+            position: new google.maps.LatLng(-33.91721, 151.22630),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.91539, 151.22820),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.91747, 151.22912),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.91910, 151.22907),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.91725, 151.23011),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.91872, 151.23089),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.91784, 151.23094),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.91682, 151.23149),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.91790, 151.23463),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.91666, 151.23468),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.916988, 151.233640),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-33.91662347903106, 151.22879464019775),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(-33.91665018901448, 151.2282474695587),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(-33.919543720969806, 151.23112279762267),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(-33.91608037421864, 151.23288232673644),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(-33.91851096391805, 151.2344058214569),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(-33.91818154739766, 151.2346203981781),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(-33.91727341958453, 151.23348314155578),
+            type: 'library'
+          }
+        ];
+
+        // Create markers.
+        features.forEach(function(feature) {
+          var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+            map: map
+          });
+        });
 	
 }
 
@@ -147,10 +217,317 @@ function showText(i) {
 	
 }
 
+var mapOPR;
+var markers = [];
+
+function initMapOPR() {
+	var uluru = {lat: 48.180744, lng: 17.164731};
+	mapOPR = new google.maps.Map(document.getElementById('mapOPR'), {
+	  zoom: 15,
+	  center: uluru,
+	  styles: [
+		{elementType: 'geometry', stylers: [{color: '#ecf0f1'}]},//
+		{elementType: 'labels.text.stroke', stylers: [{visibility: "off"}]},
+		{elementType: 'labels.text.fill', stylers: [{visibility: "off"}]},//
+		{
+		  featureType: 'administrative.locality',
+		  elementType: 'labels.text.fill',
+		  stylers: [{visibility: "off"}]//
+		},
+		{
+		  featureType: 'poi',
+		  elementType: 'labels.text.fill',
+		  stylers: [{color: 'black'}]//firmy text vypln
+		},
+		{
+		  featureType: 'poi.park',
+		  elementType: 'geometry',
+		  stylers: [{color: '#27ae60'}]// parky
+		},
+		{
+		  featureType: 'poi.park',
+		  elementType: 'labels.text.fill',
+		  stylers: [{color: 'white'}]
+		},
+		{
+		  featureType: 'road',
+		  elementType: 'geometry',
+		  stylers: [{
+			color: '#7f8c8d',
+		  }]//cesty
+		},
+		{
+		  featureType: 'road',
+		  elementType: 'geometry.stroke',
+		  stylers: [{color: '#212a37'}] // NO IDEA
+		},
+		{
+		  featureType: 'road',
+		  elementType: 'labels.text.fill',
+		  stylers: [{color: '#ecf0f1'}]//vypln nazov ulice
+		},
+		{
+		  featureType: 'road.highway',
+		  elementType: 'geometry',
+		  stylers: [{color: '#2c3e50'}]//dialnica
+		},
+		{
+		  featureType: 'road.highway',
+		  elementType: 'geometry.stroke',
+		  stylers: [{color: '#1f2835'}]
+		},
+		{
+		  featureType: 'road.highway',
+		  elementType: 'labels.text.fill',
+		  stylers: [{color: '#f3d19c'}]
+		},
+		{
+		  featureType: 'transit',
+		  elementType: 'geometry',
+		  stylers: [{color: '#f1c40f'}]//doprava
+		},
+		{
+		  featureType: 'transit.station',
+		  elementType: 'labels.text.fill',
+		  stylers: [{color: 'green'}] //MENIM1
+		},
+		{
+		  featureType: 'water',
+		  elementType: 'geometry',
+		  stylers: [{color: '#2980b9'}]//voda
+		},
+		{
+		  featureType: 'water',
+		  elementType: 'labels.text.fill',
+		  stylers: [{color: '#000000'}]
+		},
+		{
+		  featureType: 'water',
+		  elementType: 'labels.text.stroke',
+		  stylers: [{color: '#000000'}]
+		}
+	  ]
+	});
+	
+
+	var iconBase = "../images/markers/"
+
+    var features = [
+        {
+						position: new google.maps.LatLng(48.175863, 17.159855),
+            type: 'Food'
+        },{
+						position: new google.maps.LatLng(48.181033, 17.169321),
+						type: 'Food'
+				}, {
+						position: new google.maps.LatLng(48.175973, 17.165859),
+            type: 'Food'
+        }, {
+						position: new google.maps.LatLng(48.182151, 17.160428),
+            type: 'Food'
+        }, {
+						position: new google.maps.LatLng(48.176853, 17.156598),
+            type: 'Food'
+				}, {
+						position: new google.maps.LatLng(48.182384, 17.172108),
+							type: 'Food'
+				},{
+							position: new google.maps.LatLng(48.182939, 17.172516),
+							type: 'Food'
+				},{
+							position: new google.maps.LatLng(48.186004, 17.178815),
+							type: 'Food'
+				},{
+            position: new google.maps.LatLng(48.187392, 17.167035),
+            type: 'Doctor'
+        }, {
+						position: new google.maps.LatLng(48.186262, 17.176863),
+						type: 'Doctor'
+				},{
+            position: new google.maps.LatLng(48.189348, 17.169328),
+            type: 'Shop'
+        },{
+						position: new google.maps.LatLng(48.186704, 17.165664),
+						type: 'Shop'
+				},{
+						position: new google.maps.LatLng(48.186720, 17.177743),
+						type: 'Shop'
+				},{
+						position: new google.maps.LatLng(48.167457, 17.153745),
+						type: 'Shop'
+				},{
+						position: new google.maps.LatLng(48.166844, 17.152163),
+						type: 'Shop'
+				},{
+						position: new google.maps.LatLng(48.167792, 17.182818),
+						type: 'Shop'
+				},{
+						position: new google.maps.LatLng(48.169109, 17.165337),
+						type: 'Shop'
+				},{
+						position: new google.maps.LatLng(48.164632, 17.147088),
+						type: 'Shop'
+				},{
+						position: new google.maps.LatLng(48.173949, 17.158528),
+						type: 'School'
+				},{
+						position: new google.maps.LatLng(48.172951, 17.166765),
+						type: 'School'
+				},{
+						position: new google.maps.LatLng(48.171180, 17.169058),
+						type: 'School'
+				},{
+						position: new google.maps.LatLng(48.170532, 17.154926),
+						type: 'ATM'
+				},{
+						position: new google.maps.LatLng(48.169587, 17.164753),
+						type: 'ATM'
+				},{
+						position: new google.maps.LatLng(48.176427, 17.169431),
+						type: 'ATM'
+				},{
+						position: new google.maps.LatLng(48.186414, 17.179259),
+						type: 'ATM'
+				},{
+						position: new google.maps.LatLng(48.170154, 17.169950),
+						type: 'Sport'
+				},{
+						position: new google.maps.LatLng(48.164001, 17.149903),
+						type: 'Sport'
+				},{
+						position: new google.maps.LatLng(48.171336, 17.177828),
+						type: 'Sport'
+				}
+    ];
+
+		// Create markers.
+		
+	var marker = new google.maps.Marker({
+		position: uluru,
+		icon: {
+		  url: "../images/marker.png",
+		  scaledSize: new google.maps.Size(60,60)
+		},
+		map: mapOPR
+	});
+
+    features.forEach(function(feature) {
+      	var customMarker = new google.maps.Marker({
+			position: feature.position,
+			icon: {
+				url: iconBase + "newMarker" + [feature.type] + ".png",
+				scaledSize: new google.maps.Size(50,60),
+			},
+			type: feature.type,
+			map: mapOPR
+		});
+		markers.push(customMarker); 
+	});	
+}
+var toggleClickBoolShop = true;
+var toggleClickBoolDoctor = true;
+var toggleClickBoolSchool = true;
+var toggleClickBoolFood = true;
+var toggleClickBoolSport = true;
+var toggleClickBoolATM = true;
+var toggleClickBoolSport = true;
+
+function toggleClick(string) {
+	if ((toggleClickBoolShop) && (string == "Shop")) {
+		clearMarkers(string);
+		toggleClickBoolShop = false;
+	}
+	else if ((toggleClickBoolDoctor) && (string == "Doctor")) {
+		clearMarkers(string);
+		toggleClickBoolDoctor = false;
+	}
+	else if ((toggleClickBoolSchool) && (string == "School")) {
+		clearMarkers(string);
+		toggleClickBoolSchool = false;
+	}
+	else if ((toggleClickBoolFood) && (string == "Food")) {
+		clearMarkers(string);
+		toggleClickBoolFood = false;
+	}
+	else if ((toggleClickBoolATM) && (string == "ATM")) {
+		clearMarkers(string);
+		toggleClickBoolATM = false;
+	}
+	else if ((toggleClickBoolSport) && (string == "Sport")) {
+		clearMarkers(string);
+		toggleClickBoolSport = false;
+	}
+	else if ((!toggleClickBoolShop) && (string == "Shop")) {
+		showMarkers(string);
+		toggleClickBoolShop = true;
+	}
+	else if ((!toggleClickBoolDoctor) && (string == "Doctor")) {
+		showMarkers(string);
+		toggleClickBoolDoctor = true;
+	}
+	else if ((!toggleClickBoolSchool) && (string == "School")) {
+		showMarkers(string);
+		toggleClickBoolSchool = true;
+	}
+	else if ((!toggleClickBoolFood) && (string == "Food")) {
+		showMarkers(string);
+		toggleClickBoolFood = true;
+	}
+	else if ((!toggleClickBoolSport) && (string == "Sport")) {
+		showMarkers(string);
+		toggleClickBoolSport = true;
+	}
+	else if ((!toggleClickBoolATM) && (string == "ATM")) {
+		showMarkers(string);
+		toggleClickBoolATM = true;
+	}
+	else if ((!toggleClickBoolSport) && (string == "Sport")) {
+		showMarkers(string);
+		toggleClickBoolSport = true;
+	}
+}
+
+function clearMarkers(string) {
+	for (var i = 0; i < markers.length; i++) {
+		if (markers[i].type == string) {
+			markers[i].setMap(null);
+		}
+	}
+}
+
+function showMarkers(string) {
+	for (var i = 0; i < markers.length; i++) {
+		if (markers[i].type == string) {
+			markers[i].setMap(mapOPR);
+		}
+	}
+}
 
 
 //        BYTY A PARKOVANIE        //
 
+function scrollDown(n) {
+	if (n == 1) {
+		$('html, body').animate({
+			scrollTop: $(".smallNav").offset().top
+		}, 1000);
+	}
+	else if (n == 2) {
+		$('html, body').animate({
+			scrollTop: $("#scrollDown2").offset().top
+		}, 1000);
+	}
+	else if (n == 3) {
+		$('html, body').animate({
+			scrollTop: $("#scrollDown3").offset().top
+		}, 1000);
+	}
+	else if (n == 4) {
+		$('html, body').animate({
+			scrollTop: $("#scrollDown4").offset().top
+		}, 1000);
+	}
+}
 
 
 	// Switch
@@ -221,8 +598,6 @@ function showText(i) {
 		}
 	});
 });
-
-
 
 
 // Zobrazenie podorysu poschodia
@@ -367,16 +742,16 @@ function transform(n) {
 		$("#ukazkaByt" + i).removeAttr("class","thisOne");
 	}
 	if ((n == 1) || (n == 8) || (n == 16) || (n == 23)) {
-		$("#ukazkaByt1").attr("class","thisOne");
+		$("#ukazkaByt4").attr("class","thisOne");
 	}
 	else if ((n == 2) || (n == 9) || (n == 17) || (n == 24)) {
 		$("#ukazkaByt2").attr("class","thisOne");
 	}
 	else if ((n == 3) || (n == 10) || (n == 18) || (n == 25)) {
-		$("#ukazkaByt3").attr("class","thisOne");
+		$("#ukazkaByt1").attr("class","thisOne");
 	}
 	else if ((n == 4) || (n == 11) || (n == 19) || (n == 26)) {
-		$("#ukazkaByt4").attr("class","thisOne");
+		$("#ukazkaByt3").attr("class","thisOne");
 	}
 	else if ((n == 5) || (n == 12) || (n == 20) || (n == 27)) {
 		$("#ukazkaByt5").attr("class","thisOne");
