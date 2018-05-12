@@ -27,7 +27,8 @@ if(isset($_POST['submit'])){
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 	
 	<!-- own -->
-	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link id="stylesheet" rel="stylesheet" type="text/css" href="../small.css" media="only screen and (max-width: 800px)">
+	<link id="stylesheet" rel="stylesheet" type="text/css" href="../style.css" media="only screen and (min-width: 800px)">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 	
@@ -41,6 +42,7 @@ if(isset($_POST['submit'])){
     </script>
   </head>
   <body>
+  <div id="type" style="display: none;">2</div>
    
    <nav>
 		<div class="container">
@@ -50,7 +52,9 @@ if(isset($_POST['submit'])){
 				<li><a class="navBrand" href="../index.html"> Byty Jurajov dvor </a></li>
 				<li><img class="navLogo" src="../images/logo.png" alt="logo" /></li>
 				<li style="float: right;" class="navButton">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navCollapse" aria-expanded="false">
+					<button type="button" class="navButton navbar-toggle" onclick="menuCollapse()">
+						<div class="menuToggler"></div>
+						<div class="menuToggler"></div>
 						<div class="menuToggler"></div>
 						<div class="menuToggler"></div>
 					</button>
@@ -143,24 +147,27 @@ if(isset($_POST['submit'])){
 	<footer>
 		<div class="row">
 			<div class="col-lg-4">
-				<h2 style="padding: 25px 0px 0px 20%;">Developer</h2>
-				<p style="padding: 0px 0px 0px 20%;">
-					Byty Jurajov dvor, s.r.o.<br>
-					Vajnorská 28, <br>
-					805 12, Bratislava
-				</p>
+				<div class="container" style="width: 200px; padding-top: 25px;">
+					<h2 class="text-center">Developer</h2>
+					<p style="padding: 0px 0px 0px 15%;">
+						Byty Jurajov dvor, s.r.o.<br>
+						Vajnorská 28, <br>
+						805 12, Bratislava
+					</p>
+				</div>
 			</div>
 			<div class="col-lg-4" style="padding-top: 40px;">
-				<!--<h2 class="text-center" style="margin-top: 0px; color: white;">Byty Jurajov dvor</h2>-->
-				<img src="images/logoKruh.png" style="width: 95px; display: block; margin: auto; padding-top: 10px;" alt="logoDeveloper"/>
+				<img src="../images/logoKruh.png" style="width: 95px; display: block; margin: auto; padding-top: 10px;" alt="logoDeveloper"/>
 			</div>
-			<div class="col-lg-4" style="padding: 25px 0px 0px 15%;">
-				<h2>Kontakty</h2>
-				<p>
-					0905 123 456 <br>
-					EMAIL <br>
-					FACEBOOK
-				</p>
+			<div class="col-lg-4">
+				<div class="container" style="width: 200px; padding-top: 25px;">
+					<h2 class="text-center">Kontakty</h2>
+					<p style="padding: 0px 0px 0px 20%;">
+						0905 123 456 <br>
+						EMAIL <br>
+						FACEBOOK
+					</p>
+				</div>
 			</div>
 		</div>
 	</footer>	

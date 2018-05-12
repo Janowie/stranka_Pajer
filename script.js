@@ -1,10 +1,11 @@
 //		FRONT		//
 
-$(document).ready(function(){
-	$(".navButton").click(function(){
-		$("#navCollapse").show();
-	});
-});
+function menuCollapse() {
+	$("#navCollapse").toggle(300);
+}
+
+
+
 
 //        KONTAKTY                //
 
@@ -1085,107 +1086,16 @@ sliderC.oninput = function() {
   outputC.innerHTML = this.value;
 }
 
-
-
-urok = new Array(9,9,9,9,9,9,9,9,9,9,9,9,9,9,9);
-
 function nOw() {
 	document.ten.submit();
 }
 
 function calculate() {
-aa = parseInt(document.ten.a01.value);
-//ab = parseInt(document.ten.a02.value);  ///////////////////////////////////////////    VYSKA UVERU    //////////////////////////////////////////
-ab = parseInt(sliderA.value);
-//ac = parseInt(document.ten.a04.value);	//dlzka v rokoch
-ac = parseInt(sliderC.value);
-ad = parseInt(document.ten.a05.value); //options[document.ten.a05.selectedIndex].
-ae = "0"; //parseInt(document.ten.a09.value);
-ai = parseInt(document.ten.a12.value);
-aj = parseInt(document.ten.a13.value);
-ak = parseInt(document.ten.a14.value);
-al = parseInt(document.ten.a15.value);
-am = parseInt(document.ten.a16.value);
-ar = parseInt(document.ten.a17.value);
-as = parseInt(document.ten.a18.value);
-av = parseInt(document.ten.a21.value);
-document.ten.a03.value = Math.round((ab/70)*100);
-
-//af = document.ten.a06.value;    ////////////////////////////////////////////////////   PERCENTO UROK   //////////////////////////////////////////
-af = sliderB.value;
-//af = af.replace(",",".");
-
-
-
-//if (document.ten.a09.options[document.ten.a09.selectedIndex].value == 0)
-//ae = 0;
-
-// - vypocet A
-za = (((af/100) / 12 * (365.25 / 360))+1);
-zb = ac * 12;
-zc = Math.pow(za,zb);
-ag = Math.round(ab * zc * (1-za) / (1-zc));
-//document.ten.a07.value = ag; ///////////////////////////////////////////////////////     VYSLEDNA    ////////////////////////////////////////////////
-document.getElementById("result").innerHTML = ag;
-document.ten.askk.value = Math.round(ag*30.126);
-
-// - SFP
-if (ae < ab)
-au = ae;
-else
-au = ab;
-zd = (((af/100) / 12) + 1);
-ze = Math.pow(zd,zb);
-zf = (au * ze * (1-zd) / (1-ze));
-zg = ((((af - 0)/100) / 12) + 1);   // vyska statneho prispevku
-zh = Math.pow(zg,zb);
-zi = (au * zh * (1-zg) / (1-zh));
-zj = Math.round(zf - zi);
-document.ten.a08.value = zj;
-
-// - efektivni splatka
-zk = ag - zj;
-//document.ten.a11.value = zk;
-document.ten.a11.value = zk*ac*12;
-
-
-// - rozpocet rodiny
-an = (ai*2190) + (aj*1600) + (ak*1780) + (al*2110) + (am*2310);
-ao = ai + aj + ak + al + am;
-ap = 0;
-if (ao == 1)
-ap = 1580;
-if (ao == 2)
-ap = 2060;
-if ((ao > 2) && (ao < 5))
-ap = 2560;
-if (ao > 4 )
-ap = 2870;
-aq = (((an + ap)*1.2) + ar + as);
-document.ten.a19.value = aq;
-
-// - minimalni vydej domacnosti
-at = Math.round(aq + (ag / 90 * 100));
-document.ten.a20.value = at;
-
-// - kolik muze ziskat
-ba = av - at;
-document.ten.a22.value = ba;
-bb = ba + zj;
-document.ten.a23.value = bb;
-
-// - MAX HU
-bc = (((af/100) / 12 * (365.25 / 360))+1);
-bd = ac * 12;
-be = Math.pow(bc,bd);
-bf = (av - aq)/100 * 90;
-bg = Math.round(bf/(be * (1-bc)/(1-be)));
-document.ten.a24.value = bg;
-bh = Math. round(bg / 70 * 100);
-document.ten.a25.value = bh;
-
+	var result = document.getElementById("result");
+	var outputFunction = 0;
+	outputFunction = (sliderA.value * 12 * (Math.pow(1 + sliderB.value / 100, 1/12) - 1) / (12 * (1 - Math.pow(1 + sliderB.value / 100, -sliderC.value))));
+	result.innerHTML = Math.round(outputFunction * 100) / 100;
 }
-// -->
 
 
 

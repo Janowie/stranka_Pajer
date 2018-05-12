@@ -12,19 +12,30 @@ body {
 	overflow-x: hidden;
 }
 
+/*  NAVIGATION */
+
 nav {
 	border-bottom: 8px solid #f1c40f;
 	font-family: 'Maven Pro', sans-serif;
 	z-index: 5000000;
-    background-color: white;
-    overflow: hidden;
-    height: 105px;
+	background-color: white;
 }
 
 nav .container {
 	width: 100%;
 	padding: 0px;
 	margin: 0px;
+}
+
+nav ul {
+	list-style-type: none;
+    margin: 0% 0% 0% 10%;
+    padding: 0%;
+    overflow: hidden;
+}
+
+nav li {
+	float: left;
 }
 
 nav li a {
@@ -48,47 +59,38 @@ nav li a {
 	font-family: 'Maven Pro', sans-serif;
 }
 
+.navButton {
+	position: absolute;
+	top: 7px;
+	left: -2px;
+}
+
+#navCollapse {
+	display: none;
+	padding: 13px 50% 0px 0px;
+}
 
 .menuToggler {
 	height: 3px;
-	width: 10px;
+	width: 23px;
 	background-color: black;
-	margin-top: 2px;
-}
-	
-nav ul{
-	margin: 0px;
+	margin-top: 3px;
 }
 
-ul li {
-	float: none;
-	margin: 0px;
-	padding: 0px;
+.menuToggler:nth-child(2) {
+	height: 3px;
+	width: 26px;
+	background-color: #f1c40f;
+	margin-top: 3px;
 }
-	
-#navCollapse {
-    padding: 0%;
-    width: 150px;
-    margin: auto;
-    display: none;
+
+.menuToggler:nth-child(4) {
+	height: 3px;
+	width: 20px;
+	background-color: #f1c40f;
+	margin-top: 3px;
 }
-	
-.navLogo {
-	margin-top: -80px;
-	margin-left: 10px;
-}
-	
-.navBrand {
-    padding-top: 35px;
-    font-size: 20px;
-    text-align: center;
-}
-	
-.navButton {
-    position: absolute;
-    top: 12px;
-    right: 5px;
-}
+
     
     
 /*  NAVIGATION */
@@ -161,26 +163,28 @@ h3 {
 
 
 .smallNavigation {
-	width: 30%;
-	max-width: 400px;
-	margin: 20px auto 20px auto;
+	width: 150px;
+	margin: 20px auto 70px auto;
 	font-weight: bold;
 }
 
 .smallNavigation ul {
 	list-style: none;
+	padding: 0px!important;
 }
 
 
 
 .smallNavigation li{
 	display: inline;
-	padding: 10px 20px 10px 0px;
 }
 
 .smallNav {
-	margin-top: 70px;
 	padding: 0px;
+}
+
+.smallNav .col-lg-6:nth-child(2) {
+	margin-top: -120px;
 }
 
 .smallNav .col-lg-6 img {
@@ -188,9 +192,13 @@ h3 {
 }
 
 .smallNav .textCez {
-	margin: -65% auto 50% auto;
+	margin: -70% auto 50% auto;
 	color: black;
 	font-weight: bold;
+}
+
+#scrollDown2 {
+	margin-top: -50px;
 }
 
 
@@ -217,7 +225,10 @@ footer {
 
 /* FRONT PAGE */
 
-/* VIDEOO FRONT */
+#myCarousel {
+	display: none !important;
+}
+
 .stayBlack a:hover {
 	color: black!important;
 }
@@ -250,7 +261,7 @@ footer {
 }
 
 .addPadding {
-    padding: 10px;
+    padding: 10px 35px 0px 35px;
 }
 
 
@@ -469,6 +480,21 @@ footer {
     cursor: pointer;
 }
 
+.resultBack {
+	width: 100%;
+	padding: 8px 0px 20px 0px;
+	background-color: #d3d3d3;
+}
+
+#result {
+	margin-top: 30px;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	color: #4CAF50;
+
+}
+
 /*     BYTY A PARKOVANIE        */
 
 .bytyPoschodia {
@@ -524,20 +550,24 @@ svg {
 	width: 100%;
 }
 
-#P1,#P2,#P3,#P4,#P5,#P6,#P7,#P8,#P9,#P10,
+#P7,#P8,#P9,#P10,
 #P11,#P12,#P13,#P14,#P15,#P16,#P17,#P18,#P19,
-#P20,#P21,#P22,#P23,#P24,#P25,#P26 {
+#P20,#P21,#P22,#P23,#P24 {
 	fill: rgba(42, 127, 6, 0.5);
+}
+
+#P1,#P2,#P3,#P4,#P5,#P6,#P25,#P26 {
+	fill: rgba(241, 196, 15, 0.5);
 }
 
 #poschodie1D1, #poschodie1D2, #poschodie1J3, 
 #poschodie1J4, #poschodie1J5, #poschodie1J6, 
-#poschodie1J7, #poschodie2D1, #poschodie2D2, 
-#poschodie2J3, #poschodie2J4, #poschodie2J5, 
+#poschodie1J7, #poschodie2D2, 
+#poschodie2J4, #poschodie2J5, 
 #poschodie2J6, #poschodie2J7, #poschodie2J8,
-#poschodie3D1, #poschodie3D2, #poschodie3J3, 
+#poschodie3D2, #poschodie3J3, 
 #poschodie3J4, #poschodie3J5, #poschodie3J6, 
-#poschodie3D7, #poschodie4D1, #poschodie4D2, 
+#poschodie3D7, #poschodie4D2, 
 #poschodie4J3, #poschodie4J4, #poschodie4J5, 
 #poschodie4J6, #poschodie4D7 
 {
@@ -547,15 +577,20 @@ svg {
 
 #poschodie1D1:hover, #poschodie1D2:hover, #poschodie1J3:hover, 
 #poschodie1J4:hover, #poschodie1J5:hover, #poschodie1J6:hover, 
-#poschodie1J7:hover, #poschodie2D1:hover, #poschodie2D2:hover, 
-#poschodie2J3:hover, #poschodie2J4:hover, #poschodie2J5:hover, 
+#poschodie1J7:hover, #poschodie2D2:hover, 
+#poschodie2J4:hover, #poschodie2J5:hover, 
 #poschodie2J6:hover, #poschodie2J7:hover, #poschodie2J8:hover,
-#poschodie3D1:hover, #poschodie3D2:hover, #poschodie3J3:hover, 
+#poschodie3D2:hover, #poschodie3J3:hover, 
 #poschodie3J4:hover, #poschodie3J5:hover, #poschodie3J6:hover, 
-#poschodie3D7:hover, #poschodie4D1:hover, #poschodie4D2:hover, 
+#poschodie3D7:hover, #poschodie4D2:hover, 
 #poschodie4J3:hover, #poschodie4J4:hover, #poschodie4J5:hover, 
 #poschodie4J6:hover, #poschodie4D7:hover  {
 	fill: rgba(42, 127, 6, 0.5);
+	cursor: pointer;
+}
+
+#poschodie2D1, #poschodie2J3, #poschodie3D1, #poschodie4D1 {
+	fill: rgba(241, 196, 15, 0.5);
 	cursor: pointer;
 }
 
@@ -648,15 +683,10 @@ svg {
 	cursor: pointer;
 }
 
-.tdTableArrow {
- background-color: #f1c40f;
- width: 20px !important;
+.rezerved td {
+	background-color: rgba(241, 196, 15, 0.5); 
 }
-.tableArrow {
-	width: 50px;
-	cursor: pointer;
-	margin: auto;
-}
+
 
 /*  Pagination  */
 
@@ -763,7 +793,7 @@ td {
 
 .tableHead {
 	font-weight: bold;
-	border-bottom: 3px solid grey;
+	border-bottom: 4px solid grey;
 	height: 50px;
 	text-align: center;
 	background-color: #95a5a6;
@@ -803,7 +833,13 @@ table p {
 	height: 10px; 
 	background-color: #04a22d;
 	float: left;
+}
 
+.legend3 {
+	width: 10px; 
+	height: 10px; 
+	background-color: #f1c40f;
+	float: left;
 }
 
 .legend {
